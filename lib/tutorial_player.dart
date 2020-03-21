@@ -4,26 +4,20 @@ class TutorialPopupPlayer extends StatefulWidget {
 
   const TutorialPopupPlayer({
     Key key,
-    this.title,
-    this.desc,
-    this.okFun,
-    this.cancelFun,
     this.gifPath = 'assets/forward.gif',
-    this.cancelColor = Colors.red,
-    this.okColor = Colors.green,
-    this.ok = " Spieler",
-    this.cancel = "Admin",
+    this.title,
+    this.textHint,
+    this.submitName = "Load",
+    this.submitColor = Colors.blue,
+    this.submit
   }) : super(key: key);
 
-  final String title;
-  final String desc;
-  final Function okFun;
-  final Function cancelFun;
   final String gifPath;
-  final Color okColor;
-  final Color cancelColor;
-  final String ok;
-  final String cancel;
+  final String title;
+  final String textHint;
+  final Function submit;
+  final String submitName;
+  final Color submitColor;
 
   @override
   TutorialPopupPlayerDialogState createState() {
@@ -42,15 +36,12 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
   double height;
   int animationAxis=0; // 0 for x 1 for y
 
-  String title;
-  String desc;
-  Function okFun;
-  Function cancelFun;
   String gifPath;
-  Color okColor;
-  Color cancelColor;
-  String ok;
-  String cancel;
+  String title;
+  String textHint;
+  Function submit;
+  String submitName;
+  Color submitColor;
 
   @override
   Widget build(BuildContext context) {
@@ -81,9 +72,7 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
               color: Colors.white,
             ),
             child: Container(
-
               child: Column(
-
                 children: <Widget>[
                   Container(
                     margin: EdgeInsets.only(bottom: 5),
@@ -91,16 +80,18 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
                     child: image,
                   ),
 
-                  Text(title,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
+                  Text(title,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
                   Padding(padding: EdgeInsets.only(top: 0.08*dwidth), //25
                       child: Container(
                         margin: EdgeInsets.only(left: 1),
                         height: 0.28*dheight,
-                        child: Text(desc,
-                          style:TextStyle(color: Colors.grey[600],fontSize: 15),
+                        child: TextField(
                           textAlign: TextAlign.center,
-                          maxLines: 4,
-                          overflow: TextOverflow.ellipsis,
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                           border: InputBorder.none,
+                           hintText: this.textHint
+                          )
                         ),
                       )
                   ),
@@ -108,13 +99,15 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
                   Container(
                     height: dheight*0.15,
                     margin: EdgeInsets.only(left: 0.075*dwidth),//20,40
-                    child: Row(
-                      children: <Widget>[
-                        gMasterButton(cancel, cancelColor, cancelFun),
-                        Padding(padding: EdgeInsets.only(left: 0.07*dwidth),
-                            child: gMasterButton(ok, okColor, okFun)
-                        )
-                      ],
+                    alignment: Alignment.center,
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
+                      color: submitColor,
+                      child: Text(submitName,style: TextStyle(color: Colors.white,fontSize: 15),),
+                      onPressed: ()=>{
+                        submit != null ? submit() : print("function is null"),
+                        Navigator.of(context).pop()
+                      },
                     ),
                   )
 
@@ -150,15 +143,11 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
   void initState() {
 
     title=widget.title;
-    desc=widget.desc;
-    okFun=widget.okFun;
-    cancelFun=widget.cancelFun;
-    okColor=widget.okColor;
-    cancelColor=widget.cancelColor;
-    gifPath= widget.gifPath;
-    ok=widget.ok;
-    cancel=widget.cancel;
-    gifPath = 'assets/forward.gif';
+    gifPath = widget.gifPath;
+    submitColor = widget.submitColor;
+    textHint = widget.textHint;
+    submit = widget.submit;
+    submitName = widget.submitName;
 
     double start = -1.0;
 

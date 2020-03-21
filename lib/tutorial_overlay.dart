@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quarantinerpg/tutorial_admin.dart';
 import 'package:quarantinerpg/tutorial_player.dart';
 
 class TutorialPopup extends StatefulWidget {
@@ -55,92 +56,99 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
 
   @override
   Widget build(BuildContext context) {
-    width = MediaQuery.of(context).size.width;
-    height = MediaQuery.of(context).size.height *0.8;
-    dwidth = 0.59*height;
-    dheight = 0.7*height;
+    width = MediaQuery
+        .of(context)
+        .size
+        .width;
+    height = MediaQuery
+        .of(context)
+        .size
+        .height;
+    dwidth = height;
+    dheight = height;
 
-    var image=ClipRRect(
-        child: Image.asset(gifPath,fit: BoxFit.fill,width: dwidth),
-        borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
+    var image = ClipRRect(
+        child: Image.asset(gifPath, fit: BoxFit.fill, width: dwidth),
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15), topRight: Radius.circular(15))
     );
 
-    return GestureDetector(
-      child:  Dialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        child:Center(
-          child: Container(
-            width: dwidth,
-            height: dheight ,
-            transform: Matrix4.translationValues( animationAxis==0 ? animation.value*width:0, animationAxis==1 ?animation.value*width:0, 0),
+    return Dialog(
+      backgroundColor: Colors.transparent,
+      child: Column(
+        children: <Widget>[
+          //Bild
+          Container(
+            height:0.32*dheight,
+            child: image,
+          ),
+
+          // Textcontainer
+          Container(
             decoration: BoxDecoration(
-              borderRadius:BorderRadius.circular(15),
+              borderRadius: new BorderRadius.only(
+                  bottomLeft:  const  Radius.circular(15.0),
+                  bottomRight: const  Radius.circular(15.0)
+              ),
               color: Colors.white,
             ),
-            child: Container(
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(title, style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold))
+                ),
+                Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+                    child: Text(desc, style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w300)),
+                ),
 
-              child: Column(
-
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(bottom: 5),
-                    height:0.4*dheight,
-                    child: image,
-                  ),
-
-                  Text(title,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-                  Padding(padding: EdgeInsets.only(top: 0.08*dwidth), //25
-                      child: Container(
-                        margin: EdgeInsets.only(left: 1),
-                        height: 0.28*dheight,
-                        child: Text(desc,
-                          style:TextStyle(color: Colors.grey[600],fontSize: 15),
-                          textAlign: TextAlign.center,
-                          maxLines: 4,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      )
-                  ),
-
-                  Container(
-                    height: dheight*0.15,
-                    margin: EdgeInsets.only(left: 0.075*dwidth),//20,40
-                    child: Row(
-                      children: <Widget>[
-                        gMasterButton(cancel, cancelColor, cancelFun),
-                        Padding(padding: EdgeInsets.only(left: 0.07*dwidth),
-                            child: playerButton(ok, okColor, okFun)
-                        )
-                      ],
-                    ),
-                  )
-
-
-                ],
-              ),
+                createButtons(),
+              ],
             ),
-          ),
-        ),
+          )
+        ],
+
+      )
+
+
+    );
+  }
+
+  Widget createButtons() {
+    return Container(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          gMasterButton(cancel, cancelColor, cancelFun),
+          playerButton(ok, okColor, okFun)
+        ],
       ),
     );
   }
 
+
   Widget gMasterButton(String t,Color c,Function f){
 
     return Container(
-      width: 0.4*dwidth,
-      height: 0.15*dheight,
+      width: 0.2*dwidth,
+      height: 0.12*dheight,
       child: RaisedButton(
         shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
         color: c,
-        child: Text(t,style: TextStyle(color: Colors.white,fontSize: 15),),
+        child: Text(t,style: TextStyle(color: Colors.white,fontSize: 13),),
         onPressed: ()=>{
-          f != null ? f() : print("function is null"),
-          Navigator.of(context).pop()
+          showDialog(
+              context: context,
+              builder: (BuildContext context) =>
+                  TutorialPopupAdmin(
+                    title: "Session ID",
+                    textHint: "Enter ID ...",
+                    submit: () => {print("it's working :)")},
+                    //TODO
+                  )
+          )
         },
       ),
 
@@ -150,12 +158,12 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
   Widget playerButton(String t,Color c,Function f){
 
     return Container(
-      width: 0.4*dwidth,
-      height: 0.15*dheight,
+      width: 0.2*dwidth,
+      height: 0.12*dheight,
       child: RaisedButton(
         shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
         color: c,
-        child: Text(t,style: TextStyle(color: Colors.white,fontSize: 15),),
+        child: Text(t,style: TextStyle(color: Colors.white,fontSize: 13),),
         onPressed: ()=>
         {
           Navigator.of(context).pop(),
@@ -164,11 +172,10 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
                 context: context,
                 builder: (BuildContext context) =>
                     TutorialPopupPlayer(
-                      title: "Ist Okay.",
-                      desc: "This is descreption for fancy gif.",
-                      //'./assets/walp.png',
-                      okFun: () => {print("it's working :)")},
-
+                      title: "Session ID",
+                      textHint: "Enter ID ...",
+                      submit: () => {print("it's working :)")},
+                      //TODO
                     )
             )
           },

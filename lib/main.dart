@@ -74,9 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   context: context,
                   builder: (BuildContext context) =>
                       TutorialPopup(
-                        title: "Fancy Gif Dialog",
-                        desc: "This is descreption for fancy gif.",
-                        //'./assets/walp.png',
+                        title: "Anmeldung",
+                        desc: "Wähle die Rolle für das Erlebnis aus. Admin erstellt eine neues Spiel. Spieler können bestehenden Spielen beitreten.",
                         okFun: () => {print("it's working :)")},
 
                       )
