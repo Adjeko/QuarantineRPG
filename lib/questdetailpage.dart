@@ -28,10 +28,13 @@ class QuestDetailPage extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text(quest['title']),
+            child: Text(
+              quest['title'],
+              style: TextStyle(fontSize: 35)),
           ),
           Center(
-            child: Text(quest['description']),
+            child: Text(quest['description'],
+            style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic)),
           ),
           Center(
             child: Text(
@@ -39,8 +42,11 @@ class QuestDetailPage extends StatelessWidget {
               style: TextStyle(fontSize: 30, color: Colors.lightBlue),
             )
           ),
-          Center(
-            child: Text("Reale Belohnungen"),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Belohnungen:",
+              style: TextStyle(fontSize: 25)),
           ),
           ListView.builder(
             shrinkWrap: true,
@@ -63,9 +69,6 @@ class QuestDetailPage extends StatelessWidget {
                 );
             }
           ),
-          Center(
-            child: Text("Digitale Belohnungen"),
-          ),
           ListView.builder(
             shrinkWrap: true,
             itemCount: quest['digitalItems'].length,
@@ -81,46 +84,11 @@ class QuestDetailPage extends StatelessWidget {
                         return new Text("Loading...");
                       default:
                         return new Text(snapshot.data.documents[0]['icon']);
-
                     }
                   }
                 );
             }
           ),
-
-          // FutureBuilder(
-          //   future: quest['reward'].get(),
-          //   builder: (context, rewardsSnap) {
-          //     if(rewardsSnap.connectionState == ConnectionState.done) {
-          //       if(rewardsSnap.hasData){
-          //         return ListView.builder(
-          //           shrinkWrap: true,
-          //           itemCount: rewardsSnap.data['digitalItems'].length,
-          //           itemBuilder: (context, index) {
-          //             return FutureBuilder(
-          //               future: rewardsSnap.data['digitalItems'][0].get(),
-          //               builder: (context, digitalItemsSnap) {
-          //                 if(digitalItemsSnap.connectionState == ConnectionState.done) {
-          //                   if(digitalItemsSnap.hasData){
-          //                     return Text(digitalItemsSnap.data['icon'].toString());
-          //                   } else {
-          //                     return Text("Item has no data");
-          //                   }
-          //                 } else {
-          //                   return CircularProgressIndicator();
-          //                 }
-          //               }
-          //             );
-          //           },
-          //         );
-          //       } else {
-          //         return Text("keine String");
-          //       } 
-          //     } else {
-          //       return CircularProgressIndicator();
-          //     }
-          //   }
-          // ),
         ],
       ),
       floatingActionButton: SpeedDial(
