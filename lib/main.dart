@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flare_flutter/flare_actor.dart';
+import 'map.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -52,16 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Container(
-              width: 400,
-              height: 400,
-              child: FlareActor(
-                'assets/Loading.flr',
-                alignment: Alignment.center,
-                fit: BoxFit.contain,
-                animation: 'Alarm',
-              ),
-            ),
+            Map(),
             Icon(Icons.directions_transit),
             Icon(Icons.directions_bike),
           ],
