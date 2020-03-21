@@ -96,11 +96,19 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(10.0),
-                  child: Text(title, style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold))
+                  child: Text(
+                      title,
+                      style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center
+                  )
                 ),
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
-                    child: Text(desc, style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w300)),
+                    child: Text(
+                        desc,
+                        style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w300),
+                        textAlign: TextAlign.center
+                    ),
                 ),
 
                 createButtons(),
@@ -116,7 +124,7 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
   }
 
   Widget createButtons() {
-    return Container(
+    return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -130,7 +138,6 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
 
 
   Widget gMasterButton(String t,Color c,Function f){
-
     return Container(
       width: 0.2*dwidth,
       height: 0.12*dheight,
@@ -138,14 +145,16 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
         shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
         color: c,
         child: Text(t,style: TextStyle(color: Colors.white,fontSize: 13),),
-        onPressed: ()=>{
+        onPressed: ()=>
+        {
+          Navigator.of(context).pop(),
           showDialog(
               context: context,
               builder: (BuildContext context) =>
                   TutorialPopupAdmin(
-                    title: "Session ID",
-                    textHint: "Enter ID ...",
-                    submit: () => {print("it's working :)")},
+                    title: "Spielerstellung",
+                    desc: "Erstelle eine neues Spielbrett",
+                    create: () => {print("it's working :)")},
                     //TODO
                   )
           )
@@ -156,7 +165,6 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
   }
 
   Widget playerButton(String t,Color c,Function f){
-
     return Container(
       width: 0.2*dwidth,
       height: 0.12*dheight,

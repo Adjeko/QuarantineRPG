@@ -55,74 +55,70 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
         borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
     );
 
-    return GestureDetector(
-      child:  Dialog(
+    return Dialog(
+        backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        child:Center(
+        child: SingleChildScrollView(
           child: Container(
             width: dwidth,
-            height: dheight ,
-            transform: Matrix4.translationValues( animationAxis==0 ? animation.value*width:0, animationAxis==1 ?animation.value*width:0, 0),
+            height: dheight,
+            transform: Matrix4.translationValues(
+                animationAxis == 0 ? animation.value * width : 0,
+                animationAxis == 1 ? animation.value * width : 0,
+                0),
             decoration: BoxDecoration(
-              borderRadius:BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(15),
               color: Colors.white,
             ),
-            child: Container(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(bottom: 5),
-                    height:0.4*dheight,
-                    child: image,
-                  ),
+            child: Column(
+              children: <Widget>[
+                //Bild
+                Container(
+                  margin: EdgeInsets.only(bottom: 5),
+                  height: 0.5 * dheight,
+                  child: image,
+                ),
 
-                  Text(title,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold)),
-                  Padding(padding: EdgeInsets.only(top: 0.08*dwidth), //25
-                      child: Container(
-                        margin: EdgeInsets.only(left: 1),
-                        height: 0.28*dheight,
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                           border: InputBorder.none,
-                           hintText: this.textHint
-                          )
-                        ),
-                      )
-                  ),
+                Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: TextFormField(
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            labelText: title,
+                            hintText: textHint,
+                            icon: Icon(Icons.phone_iphone)
+                        )
+                    )
+                ),
 
-                  Container(
-                    height: dheight*0.15,
-                    margin: EdgeInsets.only(left: 0.075*dwidth),//20,40
-                    alignment: Alignment.center,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
-                      color: submitColor,
-                      child: Text(submitName,style: TextStyle(color: Colors.white,fontSize: 15),),
-                      onPressed: ()=>{
-                        submit != null ? submit() : print("function is null"),
-                        Navigator.of(context).pop()
-                      },
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: MaterialButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(60.0)
                     ),
+                    height: 0.15*dheight,
+                    minWidth: 0.4*dwidth,
+                    color: submitColor,
+                    child: Text(
+                      submitName,
+                      style: TextStyle(color: Colors.white, fontSize: 13),
+                    ),
+                    onPressed: () => {
+                      Navigator.of(context).pop(),
+                      //TODO: loading of existing session!
+                    },
                   )
-
-
-                ],
-              ),
+                )
+              ],
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 
   Widget gMasterButton(String t,Color c,Function f){
-
     return Container(
       width: 0.4*dwidth,
       height: 0.15*dheight,

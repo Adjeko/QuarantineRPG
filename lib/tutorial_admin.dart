@@ -5,18 +5,18 @@ class TutorialPopupAdmin extends StatefulWidget {
       {Key key,
       this.gifPath = 'assets/forward.gif',
       this.title,
-      this.textHint,
-      this.submitName = "Load",
-      this.submitColor = Colors.blue,
-      this.submit})
+      this.desc,
+      this.createName = "Create",
+      this.createColor = Colors.blue,
+      this.create})
       : super(key: key);
 
   final String gifPath;
   final String title;
-  final String textHint;
-  final Function submit;
-  final String submitName;
-  final Color submitColor;
+  final String desc;
+  final Function create;
+  final String createName;
+  final Color createColor;
 
   @override
   TutorialPopupPlayerDialogState createState() {
@@ -37,9 +37,9 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
   String gifPath;
   String title;
   String desc;
-  Function submit;
-  String submitName;
-  Color submitColor;
+  Function create;
+  String createName;
+  Color createColor;
 
   @override
   Widget build(BuildContext context) {
@@ -55,45 +55,69 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
 
     return Dialog(
         backgroundColor: Colors.transparent,
-        child: Column(
-          children: <Widget>[
-            //Bild
-            Container(
-              height: 0.32 * dheight,
-              child: image,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: SingleChildScrollView(
+          child: Container(
+            width: dwidth,
+            height: dheight,
+            transform: Matrix4.translationValues(
+                animationAxis == 0 ? animation.value * width : 0,
+                animationAxis == 1 ? animation.value * width : 0,
+                0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
             ),
-
-            // Textcontainer
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: new BorderRadius.only(
-                    bottomLeft: const Radius.circular(15.0),
-                    bottomRight: const Radius.circular(15.0)),
-                color: Colors.white,
-              ),
-              child: Column(
-                children: <Widget>[
-                  Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(title,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold))),
-                  Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+            child: Column(
+              children: <Widget>[
+                //Bild
+                Container(
+                  margin: EdgeInsets.only(bottom: 5),
+                  height: 0.5 * dheight,
+                  child: image,
+                ),
+                Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(title,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center)),
+                Padding(
+                    padding: EdgeInsets.all(10.0),
                     child: Text(desc,
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
-                            fontWeight: FontWeight.w300)),
+                            fontWeight: FontWeight.normal),
+                        textAlign: TextAlign.center)
+                ),
+
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: MaterialButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(60.0)
+                    ),
+                    height: 0.15*dheight,
+                    minWidth: 0.4*dwidth,
+                    color: createColor,
+                    child: Text(
+                      createName,
+                      style: TextStyle(color: Colors.white, fontSize: 13),
+                    ),
+                    onPressed: () => {
+                      Navigator.of(context).pop(),
+                      //TODO: create new playground and save to server + generate id
+                    },
                   ),
-                  createButton(),
-                ],
-              ),
-            )
-          ],
+                ),
+              ],
+            ),
+          ),
         ));
   }
 
@@ -101,10 +125,10 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
   void initState() {
     title = widget.title;
     gifPath = widget.gifPath;
-    submitColor = widget.submitColor;
-    desc = widget.textHint;
-    submit = widget.submit;
-    submitName = widget.submitName;
+    createColor = widget.createColor;
+    desc = widget.desc;
+    create = widget.create;
+    createName = widget.createName;
 
     double start = -1.0;
 
@@ -121,29 +145,36 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
     super.initState();
   }
 
-  createButton() {
-    return Container(
+  Widget createButton() {
+    return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Container(
-            width: 0.2 * dwidth,
-            height: 0.12 * dheight,
+            width: 0.4 * dwidth,
+            height: 0.15 * dheight,
             child: RaisedButton(
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(60.0)),
-              color: submitColor,
+              color: createColor,
               child: Text(
-                submitName,
+                createName,
                 style: TextStyle(color: Colors.white, fontSize: 13),
               ),
               onPressed: () => {
-                submit != null ? submit() : print("function is null"),
-                Navigator.of(context).pop()
+                Navigator.of(context).pop(),
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) => TutorialPopupAdmin(
+                          title: "Spielerstellung",
+                          desc: "Erstelle eine neues Spielbrett",
+                          create: () => {print("it's working :)")},
+                          //TODO
+                        ))
               },
             ),
-          ),
+          )
         ],
       ),
     );
