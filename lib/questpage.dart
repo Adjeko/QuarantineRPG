@@ -14,7 +14,7 @@ class QuestPage extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(10.0),
         child: StreamBuilder(
-          stream: Firestore.instance.collection('quests').snapshots(),
+          stream: Firestore.instance.collection('quests').where("game", isEqualTo: "game1").snapshots(),
           builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if(snapshot.hasError)
               return new Text("Error: ${snapshot.error}");
@@ -27,15 +27,16 @@ class QuestPage extends StatelessWidget {
                     snapshot.data.documents.map((DocumentSnapshot document) {
                       return new ListTile(
                         leading: Container(
-                          width: 100,
-                          height: 100,
+                          width: 50,
+                          height: 50,
                           child: FlareActor(
                             'assets/${document['icon']}.flr',
-                            alignment: Alignment.center,
-                            fit: BoxFit.contain,
+                            alignment: Alignment.centerLeft,
+                            // fit: BoxFit.contain,
                           ),
                         ),
-                        title: Text(document['title']),
+                        title: Container(
+                          child: Text(document['title'])),
                         subtitle: Text(document['description']),
                       );
                     }).toList(),
