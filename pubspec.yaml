@@ -47,6 +47,11 @@ flutter:
     - assets/Loading.flr
     - assets/forward.gif
     - assets/Bob.flr
+    - assets/IconClock.flr
+    - assets/IconCup.flr
+    - assets/IconDrops.flr
+    - assets/Houseflutterfork.flr
+    - assets/rooms.flr
     
   # To add assets to your application, add an assets section, like this:
 
