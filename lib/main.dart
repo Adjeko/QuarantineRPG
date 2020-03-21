@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'mappage.dart';
 import 'characterpage.dart';
 import 'questpage.dart';
+import 'settingspage.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Quarantäne RPG',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Quarantäne RPG'),
     );
   }
 }
@@ -43,6 +44,23 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
+          actions: <Widget>[
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage()
+              ),
+            );
+              },
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 25, 0),
+                child: Icon(Icons.settings),
+              ),
+            ),
+            
+          ],
           bottom: TabBar(
             tabs: [
               Tab(icon: Icon(Icons.directions_car)),
