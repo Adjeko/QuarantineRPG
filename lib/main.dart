@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:quarantinerpg/tutorial_overlay.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,7 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -66,12 +66,27 @@ class _MyHomePageState extends State<MyHomePage> {
             Icon(Icons.directions_bike),
           ],
         ),
+
         floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
+            onPressed: () =>
+            {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) =>
+                      TutorialPopup(
+                        title: "Fancy Gif Dialog",
+                        desc: "This is descreption for fancy gif.",
+                        //'./assets/walp.png',
+                        okFun: () => {print("it's working :)")},
+
+                      )
+              )
+            },
+            tooltip: 'Increment',
           child: Icon(Icons.add),
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
     );
   }
+
 }
