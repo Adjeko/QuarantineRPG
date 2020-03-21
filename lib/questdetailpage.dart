@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class QuestDetailPage extends StatelessWidget {
 
@@ -32,24 +33,11 @@ class QuestDetailPage extends StatelessWidget {
           Center(
             child: Text(quest['description']),
           ),
-          FutureBuilder(
-            future: quest['reward'].get(),
-            builder: (context, rewardsSnap) {
-              if(rewardsSnap.connectionState == ConnectionState.done) {
-                if(rewardsSnap.hasData){
-                  return Center(
-                        child: Text(
-                          "${rewardsSnap.data['experience']} XP",
-                          style: TextStyle(fontSize: 30, color: Colors.lightBlue),
-                        )
-                  );
-                } else {
-                  return Text("keine String");
-                } 
-              } else {
-                return CircularProgressIndicator();
-              }
-            }
+          Center(
+            child: Text(
+              "${quest['experience']} XP",
+              style: TextStyle(fontSize: 30, color: Colors.lightBlue),
+            )
           ),
           Center(
             child: Text("Reale Belohnungen"),
@@ -112,14 +100,21 @@ class QuestDetailPage extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-            onPressed: () =>
-            {
-              
-            },
-            tooltip: 'neue Belohnungen',
-          child: Icon(Icons.add),
-        ), 
+      floatingActionButton: SpeedDial(
+        animatedIcon: AnimatedIcons.add_event,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.add),
+            label: "Reale Belohnung hinzufügen",
+            onTap: () {},
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.add),
+            label: "Digitale Belohnung hinzufügen",
+            onTap: () {},
+          ),
+        ],
+      ), 
     );
   }
 }
