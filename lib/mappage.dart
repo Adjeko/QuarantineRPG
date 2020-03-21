@@ -11,7 +11,7 @@ class MapPage extends StatelessWidget {
       height: 400,
       child: FlareActor(
         'assets/House1.flr',
-        alignment: Alignment.center,
+        alignment: Alignment.topCenter,
         fit: BoxFit.contain,
       ),
     );
