@@ -5,8 +5,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class QuestPage extends StatelessWidget {
 
-  List<String> mockList = ["Test1", "Aufgabe", "Hände waschen"];
-
   @override
   Widget build(BuildContext context) {
     
@@ -14,7 +12,7 @@ class QuestPage extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(10.0),
         child: StreamBuilder(
-          stream: Firestore.instance.collection('tasks').snapshots(),
+          stream: Firestore.instance.collection('quests').where("game", isEqualTo: "game1").snapshots(),
           builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if(snapshot.hasError)
               return new Text("Error: ${snapshot.error}");
@@ -26,9 +24,30 @@ class QuestPage extends StatelessWidget {
                   children: 
                     snapshot.data.documents.map((DocumentSnapshot document) {
                       return new ListTile(
-                        leading: Icon(Icons.album, size:50),
-                        title: Text(document['title']),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => QuestDetailPage(quest: document,)
+                            ),
+                          );
+                        },
+                        leading: Container(
+                          width: 50,
+                          height: 50,
+                          child: FlareActor(
+                            'assets/${document['icon']}.flr',
+                            alignment: Alignment.centerLeft,
+                            // fit: BoxFit.contain,
+                          ),
+                        ),
+                        title: Container(
+                          child: Text(document['title'])),
                         subtitle: Text(document['description']),
+                        trailing: Text(
+                                  "${document['experience']} XP",
+                                  style: TextStyle(fontSize: 30, color: Colors.lightBlue),
+                        ),
                       );
                     }).toList(),
                 );

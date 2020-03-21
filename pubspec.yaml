@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   cloud_firestore: ^0.13.4+2
+  flutter_speed_dial: ^1.2.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -48,6 +49,11 @@ flutter:
     - assets/Loading.flr
     - assets/forward.gif
     - assets/Bob.flr
+    - assets/IconClock.flr
+    - assets/IconCup.flr
+    - assets/IconDrops.flr
+    - assets/Houseflutterfork.flr
+    - assets/rooms.flr
     
   # To add assets to your application, add an assets section, like this:
 
