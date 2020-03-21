@@ -44,6 +44,22 @@ class QuestPage extends StatelessWidget {
                         title: Container(
                           child: Text(document['title'])),
                         subtitle: Text(document['description']),
+                        trailing: FutureBuilder(
+                          future: document['reward'].get(),
+                          builder: (context, rewardsSnap) {
+                            if(rewardsSnap.connectionState == ConnectionState.done) {
+                              if(rewardsSnap.hasData){
+                                return Text(
+                                  "${rewardsSnap.data['experience']} XP",
+                                  style: TextStyle(fontSize: 30, color: Colors.lightBlue),);
+                              } else {
+                                return Text("keine String");
+                              } 
+                            } else {
+                              return CircularProgressIndicator();
+                            }
+                          }
+                        ),
                       );
                     }).toList(),
                 );

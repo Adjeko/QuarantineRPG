@@ -38,8 +38,11 @@ class QuestDetailPage extends StatelessWidget {
               if(rewardsSnap.connectionState == ConnectionState.done) {
                 if(rewardsSnap.hasData){
                   return Center(
-                        child: Text("Erfahrung: ${rewardsSnap.data['experience']}"),
-                      );
+                        child: Text(
+                          "${rewardsSnap.data['experience']} XP",
+                          style: TextStyle(fontSize: 30, color: Colors.lightBlue),
+                        )
+                  );
                 } else {
                   return Text("keine String");
                 } 
@@ -109,6 +112,14 @@ class QuestDetailPage extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+            onPressed: () =>
+            {
+              
+            },
+            tooltip: 'neue Belohnungen',
+          child: Icon(Icons.add),
+        ), 
     );
   }
 }
