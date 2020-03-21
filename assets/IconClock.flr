@@ -4,16 +4,16 @@
 		{
 			"name": "Artboard",
 			"translation": [
-				0,
-				0
+				-483.0809326171875,
+				-24.786453247070312
 			],
-			"width": 1024,
-			"height": 768,
+			"width": 400,
+			"height": 400,
 			"origin": [
-				0,
-				0
+				-0.7799999713897705,
+				-0.46000003814697266
 			],
-			"clipContents": true,
+			"clipContents": false,
 			"color": [
 				0.364705890417099,
 				0.364705890417099,
@@ -90,7 +90,7 @@
 					"type": "radialGradientFill"
 				},
 				{
-					"name": "droplet",
+					"name": "clock",
 					"translation": [
 						512,
 						384
@@ -109,8 +109,8 @@
 					"name": "Shape",
 					"parent": 3,
 					"translation": [
-						-0.00000476837158203125,
-						0.000003814697265625
+						0,
+						0
 					],
 					"rotation": 0,
 					"scale": [
@@ -131,20 +131,76 @@
 					"parent": 4,
 					"opacity": 1,
 					"color": [
-						0.2214905172586441,
-						0.16083334386348724,
-						0.9190475940704346,
+						0.21960784494876862,
+						0.16078431904315948,
+						0.9176470637321472,
 						1
 					],
 					"width": 5,
-					"cap": 1,
-					"join": 1,
+					"cap": 0,
+					"join": 0,
+					"trim": 0,
+					"type": "colorStroke"
+				},
+				{
+					"name": "Ellipse",
+					"parent": 4,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 20,
+					"height": 20,
+					"type": "ellipse"
+				},
+				{
+					"name": "Shape",
+					"parent": 3,
+					"translation": [
+						-13.999993324279785,
+						-9.999992370605469
+					],
+					"rotation": -6.4541856185722555,
+					"scale": [
+						0.9999755620956421,
+						0.9999999403953552
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 3,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 7,
+					"opacity": 1,
+					"color": [
+						0.21960784494876862,
+						0.16078431904315948,
+						0.9176470637321472,
+						1
+					],
+					"width": 5,
+					"cap": 0,
+					"join": 0,
 					"trim": 0,
 					"type": "colorStroke"
 				},
 				{
 					"name": "Path",
-					"parent": 4,
+					"parent": 7,
 					"translation": [
 						0,
 						0
@@ -159,106 +215,34 @@
 					"clips": [],
 					"bones": [],
 					"isVisible": true,
-					"isClosed": true,
+					"isClosed": false,
 					"points": [
 						{
 							"pointType": 0,
 							"translation": [
-								-0.005000114440917969,
-								-9.659354209899902
+								12,
+								6
 							],
 							"radius": 0
 						},
 						{
-							"pointType": 2,
+							"pointType": 0,
 							"translation": [
-								5.654999732971191,
-								-3.9993538856506348
+								12,
+								12
 							],
-							"in": [
-								5.654999732971191,
-								-3.9993538856506348
-							],
-							"out": [
-								7.944071292877197,
-								-1.711782455444336
-							]
+							"radius": 0
 						},
 						{
-							"pointType": 1,
+							"pointType": 0,
 							"translation": [
-								7.391537666320801,
-								4.719610214233398
+								16,
+								14
 							],
-							"in": [
-								8.629478454589844,
-								1.7295714616775513
-							],
-							"out": [
-								6.153596878051758,
-								7.709649085998535
-							]
-						},
-						{
-							"pointType": 1,
-							"translation": [
-								-1.1444092251622351e-7,
-								9.659354209899902
-							],
-							"in": [
-								3.236175060272217,
-								9.659354209899902
-							],
-							"out": [
-								-3.236175298690796,
-								9.659354209899902
-							]
-						},
-						{
-							"pointType": 1,
-							"translation": [
-								-7.391538143157959,
-								4.719610214233398
-							],
-							"in": [
-								-6.153597354888916,
-								7.709649085998535
-							],
-							"out": [
-								-8.629478454589844,
-								1.7295714616775513
-							]
-						},
-						{
-							"pointType": 2,
-							"translation": [
-								-5.65500020980835,
-								-3.9993538856506348
-							],
-							"in": [
-								-7.944071292877197,
-								-1.711782455444336
-							],
-							"out": [
-								-5.65500020980835,
-								-3.9993538856506348
-							]
+							"radius": 0
 						}
 					],
 					"type": "path"
-				},
-				{
-					"name": "Color",
-					"parent": 4,
-					"opacity": 1,
-					"color": [
-						0.15138095617294312,
-						0.5357105135917664,
-						0.8904761672019958,
-						1
-					],
-					"fillRule": 0,
-					"type": "colorFill"
 				}
 			],
 			"animations": [],

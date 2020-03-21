@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:quarantinerpg/tutorial_overlay.dart';
+import 'mappage.dart';
+import 'characterpage.dart';
+import 'questpage.dart';
+import 'settingspage.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Quarantäne RPG',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Quarantäne RPG'),
     );
   }
 }
@@ -42,6 +46,23 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
+          actions: <Widget>[
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage()
+              ),
+            );
+              },
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(0, 0, 25, 0),
+                child: Icon(Icons.settings),
+              ),
+            ),
+            
+          ],
           bottom: TabBar(
             tabs: [
               Tab(icon: Icon(Icons.directions_car)),
@@ -52,18 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Container(
-              width: 400,
-              height: 400,
-              child: FlareActor(
-                'assets/Loading.flr',
-                alignment: Alignment.center,
-                fit: BoxFit.contain,
-                animation: 'Alarm',
-              ),
-            ),
-            Icon(Icons.directions_transit),
-            Icon(Icons.directions_bike),
+            MapPage(),
+            CharacterPage(),
+            QuestPage(),
           ],
         ),
 
