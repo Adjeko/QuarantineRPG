@@ -42,62 +42,85 @@ class QuestDetailPage extends StatelessWidget {
           Center(
             child: Text("Reale Belohnungen"),
           ),
-          FutureBuilder(
-            future: quest['reward'].get(),
-            builder: (context, rewardsSnap) {
-              if(rewardsSnap.connectionState == ConnectionState.done) {
-                if(rewardsSnap.hasData){
-                  return ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: rewardsSnap.data['realItems'].length,
-                    itemBuilder: (context, index) {
-                      return Text(rewardsSnap.data['realItems'][index]);
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: quest['realRewards'].length,
+            itemBuilder: (context, index) {
+              return
+                StreamBuilder(
+                  stream: Firestore.instance.collection('realrewards').where("name", isEqualTo: quest['realRewards'][index]).snapshots(),
+                  builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                    if(snapshot.hasError)
+                      return new Text("Error: ${snapshot.error}");
+                    switch (snapshot.connectionState) {
+                      case ConnectionState.waiting:
+                        return new Text("Loading...");
+                      default:
+                        return new Text(snapshot.data.documents[0]['description']);
+
                     }
-                  );
-                } else {
-                  return Text("keine String");
-                } 
-              } else {
-                return CircularProgressIndicator();
-              }
+                  }
+                );
             }
           ),
           Center(
             child: Text("Digitale Belohnungen"),
           ),
-          FutureBuilder(
-            future: quest['reward'].get(),
-            builder: (context, rewardsSnap) {
-              if(rewardsSnap.connectionState == ConnectionState.done) {
-                if(rewardsSnap.hasData){
-                  return ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: rewardsSnap.data['digitalItems'].length,
-                    itemBuilder: (context, index) {
-                      return FutureBuilder(
-                        future: rewardsSnap.data['digitalItems'][0].get(),
-                        builder: (context, digitalItemsSnap) {
-                          if(digitalItemsSnap.connectionState == ConnectionState.done) {
-                            if(digitalItemsSnap.hasData){
-                              return Text(digitalItemsSnap.data['icon'].toString());
-                            } else {
-                              return Text("Item has no data");
-                            }
-                          } else {
-                            return CircularProgressIndicator();
-                          }
-                        }
-                      );
-                    },
-                  );
-                } else {
-                  return Text("keine String");
-                } 
-              } else {
-                return CircularProgressIndicator();
-              }
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: quest['digitalItems'].length,
+            itemBuilder: (context, index) {
+              return
+                StreamBuilder(
+                  stream: Firestore.instance.collection('digitalitems').where("name", isEqualTo: quest['digitalItems'][index]).snapshots(),
+                  builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                    if(snapshot.hasError)
+                      return new Text("Error: ${snapshot.error}");
+                    switch (snapshot.connectionState) {
+                      case ConnectionState.waiting:
+                        return new Text("Loading...");
+                      default:
+                        return new Text(snapshot.data.documents[0]['icon']);
+
+                    }
+                  }
+                );
             }
           ),
+
+          // FutureBuilder(
+          //   future: quest['reward'].get(),
+          //   builder: (context, rewardsSnap) {
+          //     if(rewardsSnap.connectionState == ConnectionState.done) {
+          //       if(rewardsSnap.hasData){
+          //         return ListView.builder(
+          //           shrinkWrap: true,
+          //           itemCount: rewardsSnap.data['digitalItems'].length,
+          //           itemBuilder: (context, index) {
+          //             return FutureBuilder(
+          //               future: rewardsSnap.data['digitalItems'][0].get(),
+          //               builder: (context, digitalItemsSnap) {
+          //                 if(digitalItemsSnap.connectionState == ConnectionState.done) {
+          //                   if(digitalItemsSnap.hasData){
+          //                     return Text(digitalItemsSnap.data['icon'].toString());
+          //                   } else {
+          //                     return Text("Item has no data");
+          //                   }
+          //                 } else {
+          //                   return CircularProgressIndicator();
+          //                 }
+          //               }
+          //             );
+          //           },
+          //         );
+          //       } else {
+          //         return Text("keine String");
+          //       } 
+          //     } else {
+          //       return CircularProgressIndicator();
+          //     }
+          //   }
+          // ),
         ],
       ),
       floatingActionButton: SpeedDial(
