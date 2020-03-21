@@ -10,10 +10,9 @@ class MapPage extends StatelessWidget {
       width: 400,
       height: 400,
       child: FlareActor(
-        'assets/Loading.flr',
+        'assets/House1.flr',
         alignment: Alignment.center,
         fit: BoxFit.contain,
-        animation: 'Alarm',
       ),
     );
   }
