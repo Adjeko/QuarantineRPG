@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mappage.dart';
 import 'characterpage.dart';
+import 'questpage.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             MapPage(),
             CharacterPage(),
-            Icon(Icons.directions_bike),
+            QuestPage(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
