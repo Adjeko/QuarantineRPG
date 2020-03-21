@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'map.dart';
+import 'mappage.dart';
+import 'characterpage.dart';
 
 void main() => runApp(MyApp());
 
@@ -51,8 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Map(),
-            Icon(Icons.directions_transit),
+            MapPage(),
+            CharacterPage(),
             Icon(Icons.directions_bike),
           ],
         ),
