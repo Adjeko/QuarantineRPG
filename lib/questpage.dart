@@ -5,8 +5,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class QuestPage extends StatelessWidget {
 
-  List<String> mockList = ["Test1", "Aufgabe", "Hände waschen"];
-
   @override
   Widget build(BuildContext context) {
     
@@ -26,6 +24,14 @@ class QuestPage extends StatelessWidget {
                   children: 
                     snapshot.data.documents.map((DocumentSnapshot document) {
                       return new ListTile(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => QuestDetailPage(quest: document,)
+                            ),
+                          );
+                        },
                         leading: Container(
                           width: 50,
                           height: 50,
