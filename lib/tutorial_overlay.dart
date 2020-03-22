@@ -159,7 +159,7 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
                     create: () async {
                       SharedPreferences prefs = await SharedPreferences.getInstance();
                       var rng = new Random();
-                      String roomName = "room${rng.nextInt(5)}";
+                      String roomName = "room${rng.nextInt(1000)}";
                       await prefs.setString("game", roomName);
                       
                       showDialog(
