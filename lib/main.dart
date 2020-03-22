@@ -66,9 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
           bottom: TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.directions_car)),
-              Tab(icon: Icon(Icons.directions_transit)),
-              Tab(icon: Icon(Icons.directions_bike)),
+              Tab(icon: Icon(Icons.map)),
+              Tab(icon: Icon(Icons.face)),
+              Tab(icon: Icon(Icons.book)),
             ],
           ),
         ),
