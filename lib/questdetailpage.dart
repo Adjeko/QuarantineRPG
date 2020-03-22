@@ -58,19 +58,9 @@ class QuestDetailPage extends StatelessWidget {
                         ),
                       )),
 
-                  Positioned(
-                    top: imageY,
-                    width: constraints.maxWidth - xPadding,
-                    height: yTitleText,
-                    child: Center(
-                        child: Text(quest['title'],
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 30))),
-                  ),
-
                   //TODO: wieso hier keine Position??
                   Positioned(
-                    top: yTitleText + imageY,
+                    top: imageY,
                     height: yDesc,
                     width: constraints.maxWidth - xPadding,
                     child: Center(
@@ -81,7 +71,7 @@ class QuestDetailPage extends StatelessWidget {
                   ),
 
                   Positioned(
-                    top: yTitleText + imageY + yDesc,
+                    top: imageY + yDesc,
                     height: yXp,
                     width: constraints.maxWidth - xPadding,
                     child: Center(
@@ -92,7 +82,7 @@ class QuestDetailPage extends StatelessWidget {
                   ),
 
                   Positioned(
-                      top: imageY + yDesc + yXp + yTitleText + yPadding,
+                      top: imageY + yDesc + yXp + 10 * yPadding,
                       width: constraints.maxWidth - xPadding,
                       height: yReward,
                       child: Column(
