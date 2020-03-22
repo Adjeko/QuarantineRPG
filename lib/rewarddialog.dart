@@ -51,7 +51,10 @@ class RewardDialog extends StatelessWidget {
                               onTap: () async {
                                 SharedPreferences prefs = await SharedPreferences.getInstance();
                                 String gameName = prefs.getString("game");
-                                // Firestore.instance.collection("quests").document(questName).updateData({data}) //.where("game", isEqualTo: gameName).where("name", isEqualTo: questName).snapshots();
+                                var list = List<String>();
+                                list.add(document["name"]);
+                                Firestore.instance.collection("quests").document(questName).updateData({questArray: FieldValue.arrayUnion(list)}); //.where("game", isEqualTo: gameName).where("name", isEqualTo: questName).snapshots();
+                                Navigator.of(context).pop();
                               },
                               title: Container(
                                 child: Text(document[field])),

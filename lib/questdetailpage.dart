@@ -106,6 +106,8 @@ class QuestDetailPage extends StatelessWidget {
                   description: "Suche eine Belohnung aus",
                   collection: "realrewards",
                   field: "description",
+                  questArray: "realRewards",
+                  questName: quest['name'],
                 ),
               );
             },
@@ -121,6 +123,8 @@ class QuestDetailPage extends StatelessWidget {
                   description: "Suche eine Belohnung aus",
                   collection: "digitalitems",
                   field: "icon",
+                  questArray: "digitalItems",
+                  questName: quest['name'],
                 ),
               );
             },
