@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class TutorialPopupPlayer extends StatefulWidget {
   const TutorialPopupPlayer(
@@ -111,26 +112,12 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer>
                         submitName,
                         style: TextStyle(color: Colors.white, fontSize: 13),
                       ),
-                      onPressed: () => {
-                        Navigator.of(context).pop(),
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                title: new Text("Der Raum wurde erstellt"),
-                                content: new Text(textController.text),
-                                actions: <Widget>[
-                                  // usually buttons at the bottom of the dialog
-                                  new FlatButton(
-                                    child: new Text("Schließen"),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                ],
-                              );
-                            })
-                      },
+                      onPressed: () async
+                        {
+                          SharedPreferences prefs = await SharedPreferences.getInstance();
+                          await prefs.setString("game", textController.text);
+                          Navigator.of(context).pop();
+                        }
                     ))
               ],
             ),
