@@ -65,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
           ],
           bottom: TabBar(
+            indicatorColor: Colors.black,
             tabs: [
               Tab(icon: Icon(Icons.map)),
               Tab(icon: Icon(Icons.face)),
