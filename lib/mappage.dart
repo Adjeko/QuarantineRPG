@@ -31,30 +31,32 @@ class MapPage extends StatelessWidget {
                   child: ListView(
                     children: 
                       snapshot.data.documents.map((DocumentSnapshot document) {
-                        return new ListTile(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => QuestDetailPage(quest: document,)
+                        return new Card(
+                          child: ListTile(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => QuestDetailPage(quest: document,)
+                                ),
+                              );
+                            },
+                            leading: Container(
+                              width: 50,
+                              height: 50,
+                              child: FlareActor(
+                                'assets/${document['icon']}.flr',
+                                alignment: Alignment.centerLeft,
+                                // fit: BoxFit.contain,
                               ),
-                            );
-                          },
-                          leading: Container(
-                            width: 50,
-                            height: 50,
-                            child: FlareActor(
-                              'assets/${document['icon']}.flr',
-                              alignment: Alignment.centerLeft,
-                              // fit: BoxFit.contain,
                             ),
-                          ),
-                          title: Container(
-                            child: Text(document['title'])),
-                          subtitle: Text(document['description']),
-                          trailing: Text(
-                                    "${document['experience']} XP",
-                                    style: TextStyle(fontSize: 30, color: Colors.lightBlue),
+                            title: Container(
+                              child: Text(document['title'])),
+                            subtitle: Text(document['description']),
+                            trailing: Text(
+                                      "${document['experience']} XP",
+                                      style: TextStyle(fontSize: 30, color: Colors.lightBlue),
+                            ),
                           ),
                         );
                       }).toList(),
