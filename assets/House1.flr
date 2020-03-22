@@ -38,6 +38,76 @@
 					"type": "node"
 				},
 				{
+					"name": "Boden",
+					"parent": 0,
+					"translation": [
+						39.9166259765625,
+						332.7498779296875
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 74,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 1,
+					"opacity": 1,
+					"color": [
+						0.8235294222831726,
+						0.8235294222831726,
+						0.8235294222831726,
+						1
+					],
+					"width": 50,
+					"cap": 1,
+					"join": 1,
+					"trim": 0,
+					"type": "colorStroke"
+				},
+				{
+					"name": "Color",
+					"parent": 1,
+					"opacity": 1,
+					"color": [
+						0.8235294222831726,
+						0.8235294222831726,
+						0.8235294222831726,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 1,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 1500,
+					"height": 10,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
 					"name": "Livingroom",
 					"parent": 0,
 					"translation": [
@@ -56,7 +126,7 @@
 				},
 				{
 					"name": "TV",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						-163.008544921875,
 						75.13580322265625
@@ -73,7 +143,7 @@
 				},
 				{
 					"name": "TabelTV",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						31.891845703125,
 						8.5
@@ -94,7 +164,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 3,
+					"parent": 7,
 					"opacity": 1,
 					"color": [
 						0.9411764740943909,
@@ -107,7 +177,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 3,
+					"parent": 7,
 					"translation": [
 						0,
 						0
@@ -127,7 +197,7 @@
 				},
 				{
 					"name": "Modem1L",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						-3.2431640625,
 						-7.04730224609375
@@ -148,7 +218,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 6,
+					"parent": 10,
 					"opacity": 1,
 					"color": [
 						0.3047619163990021,
@@ -161,7 +231,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 6,
+					"parent": 10,
 					"translation": [
 						0,
 						0
@@ -181,7 +251,7 @@
 				},
 				{
 					"name": "Modem1R",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						100,
 						-7.05859375
@@ -202,7 +272,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 9,
+					"parent": 13,
 					"opacity": 1,
 					"color": [
 						0.5809524059295654,
@@ -215,7 +285,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 9,
+					"parent": 13,
 					"translation": [
 						0,
 						0
@@ -235,7 +305,7 @@
 				},
 				{
 					"name": "Modem2L",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						-106.8489990234375,
 						-16.289125442504883
@@ -256,7 +326,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 12,
+					"parent": 16,
 					"opacity": 1,
 					"color": [
 						0.3047619163990021,
@@ -269,7 +339,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 12,
+					"parent": 16,
 					"translation": [
 						0,
 						0
@@ -289,7 +359,7 @@
 				},
 				{
 					"name": "Modem2R",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						-90.8504638671875,
 						-16.365966796875
@@ -310,7 +380,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 15,
+					"parent": 19,
 					"opacity": 1,
 					"color": [
 						0.5803921818733215,
@@ -323,7 +393,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 15,
+					"parent": 19,
 					"translation": [
 						0,
 						0
@@ -343,7 +413,7 @@
 				},
 				{
 					"name": "SoundL",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						-153.708984375,
 						-99.8033447265625
@@ -364,7 +434,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 18,
+					"parent": 22,
 					"opacity": 1,
 					"color": [
 						0.3047619163990021,
@@ -377,7 +447,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 18,
+					"parent": 22,
 					"translation": [
 						0,
 						0
@@ -397,7 +467,7 @@
 				},
 				{
 					"name": "SoundR",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						217.5552978515625,
 						-99.8033447265625
@@ -418,7 +488,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 21,
+					"parent": 25,
 					"opacity": 1,
 					"color": [
 						0.3047619163990021,
@@ -431,7 +501,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 21,
+					"parent": 25,
 					"translation": [
 						0,
 						0
@@ -451,7 +521,7 @@
 				},
 				{
 					"name": "TVBack",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						30.291015625,
 						-196.8033447265625
@@ -472,7 +542,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 24,
+					"parent": 28,
 					"opacity": 1,
 					"color": [
 						0.3047619163990021,
@@ -485,7 +555,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 24,
+					"parent": 28,
 					"translation": [
 						0,
 						0
@@ -505,7 +575,7 @@
 				},
 				{
 					"name": "TVFront",
-					"parent": 2,
+					"parent": 6,
 					"translation": [
 						30.291015625,
 						-196.365966796875
@@ -526,7 +596,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 27,
+					"parent": 31,
 					"opacity": 1,
 					"color": [
 						0.5803921818733215,
@@ -539,7 +609,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 27,
+					"parent": 31,
 					"translation": [
 						0,
 						0
@@ -559,7 +629,7 @@
 				},
 				{
 					"name": "ROOM",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						-130.212646484375,
 						-35.51519775390625
@@ -580,7 +650,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 30,
+					"parent": 34,
 					"opacity": 1,
 					"color": [
 						0.15294118225574493,
@@ -596,7 +666,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 30,
+					"parent": 34,
 					"opacity": 1,
 					"color": [
 						0.976190447807312,
@@ -609,7 +679,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 30,
+					"parent": 34,
 					"translation": [
 						0,
 						0
@@ -629,7 +699,7 @@
 				},
 				{
 					"name": "TableOUT",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						-130.212646484375,
 						179.43804931640625
@@ -650,7 +720,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 34,
+					"parent": 38,
 					"opacity": 1,
 					"color": [
 						0.9428571462631226,
@@ -663,7 +733,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 34,
+					"parent": 38,
 					"translation": [
 						0,
 						0
@@ -717,7 +787,7 @@
 				},
 				{
 					"name": "TableIN",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						-130.212646484375,
 						190.43804931640625
@@ -738,7 +808,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 37,
+					"parent": 41,
 					"opacity": 1,
 					"color": [
 						0.9764705896377563,
@@ -751,7 +821,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 37,
+					"parent": 41,
 					"translation": [
 						0,
 						0
@@ -771,7 +841,7 @@
 				},
 				{
 					"name": "CharR",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						25.5576171875,
 						150.65740966796875
@@ -792,7 +862,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 40,
+					"parent": 44,
 					"opacity": 1,
 					"color": [
 						1,
@@ -805,7 +875,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 40,
+					"parent": 44,
 					"translation": [
 						0,
 						0
@@ -873,7 +943,7 @@
 				},
 				{
 					"name": "ChairL",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						-286.4158935546875,
 						150.65740966796875
@@ -894,7 +964,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 43,
+					"parent": 47,
 					"opacity": 1,
 					"color": [
 						1,
@@ -907,7 +977,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 43,
+					"parent": 47,
 					"translation": [
 						0,
 						0
@@ -975,7 +1045,7 @@
 				},
 				{
 					"name": "FensterAußen",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						62,
 						-230
@@ -996,7 +1066,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 46,
+					"parent": 50,
 					"opacity": 1,
 					"color": [
 						0.9411764740943909,
@@ -1009,7 +1079,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 46,
+					"parent": 50,
 					"translation": [
 						0,
 						0
@@ -1028,7 +1098,7 @@
 				},
 				{
 					"name": "FensterInnen",
-					"parent": 1,
+					"parent": 5,
 					"translation": [
 						62,
 						-230
@@ -1049,7 +1119,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 49,
+					"parent": 53,
 					"opacity": 1,
 					"color": [
 						1,
@@ -1062,7 +1132,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 49,
+					"parent": 53,
 					"translation": [
 						0,
 						0
@@ -1098,7 +1168,7 @@
 				},
 				{
 					"name": "Raum",
-					"parent": 52,
+					"parent": 56,
 					"translation": [
 						0.000030517578125,
 						-0.000030517578125
@@ -1119,7 +1189,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 53,
+					"parent": 57,
 					"opacity": 1,
 					"color": [
 						0.15294118225574493,
@@ -1135,7 +1205,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 53,
+					"parent": 57,
 					"opacity": 1,
 					"color": [
 						0.24705882370471954,
@@ -1148,7 +1218,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 53,
+					"parent": 57,
 					"translation": [
 						0,
 						0
@@ -1168,7 +1238,7 @@
 				},
 				{
 					"name": "Dusche",
-					"parent": 52,
+					"parent": 56,
 					"translation": [
 						40,
 						55.818206787109375
@@ -1189,7 +1259,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 57,
+					"parent": 61,
 					"opacity": 1,
 					"color": [
 						0.5285714268684387,
@@ -1202,7 +1272,7 @@
 				},
 				{
 					"name": "Duschkopf",
-					"parent": 57,
+					"parent": 61,
 					"translation": [
 						37.307037353515625,
 						-252.31820678710938
@@ -1223,7 +1293,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 59,
+					"parent": 63,
 					"opacity": 1,
 					"color": [
 						0.658823549747467,
@@ -1236,7 +1306,7 @@
 				},
 				{
 					"name": "DuschkopfEnde",
-					"parent": 59,
+					"parent": 63,
 					"translation": [
 						-35.807037353515625,
 						17.5
@@ -1257,7 +1327,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 61,
+					"parent": 65,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -1270,7 +1340,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 61,
+					"parent": 65,
 					"translation": [
 						0,
 						0
@@ -1290,7 +1360,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 61,
+					"parent": 65,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -1306,7 +1376,7 @@
 				},
 				{
 					"name": "DuschkopfSchatten",
-					"parent": 59,
+					"parent": 63,
 					"translation": [
 						7.491180419921875,
 						8.818206787109375
@@ -1327,7 +1397,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 65,
+					"parent": 69,
 					"opacity": 1,
 					"color": [
 						0.24705882370471954,
@@ -1340,7 +1410,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 65,
+					"parent": 69,
 					"translation": [
 						0,
 						0
@@ -1360,7 +1430,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 59,
+					"parent": 63,
 					"translation": [
 						0,
 						0
@@ -1421,7 +1491,7 @@
 				},
 				{
 					"name": "DuschHandtuch",
-					"parent": 57,
+					"parent": 61,
 					"translation": [
 						-36.5,
 						-125.31820678710938
@@ -1442,7 +1512,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 69,
+					"parent": 73,
 					"opacity": 1,
 					"color": [
 						0.8238095045089722,
@@ -1455,7 +1525,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 69,
+					"parent": 73,
 					"translation": [
 						0,
 						0
@@ -1475,7 +1545,7 @@
 				},
 				{
 					"name": "Duschboden",
-					"parent": 57,
+					"parent": 61,
 					"translation": [
 						0,
 						174.18179321289062
@@ -1496,7 +1566,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 72,
+					"parent": 76,
 					"opacity": 1,
 					"color": [
 						0.39047619700431824,
@@ -1509,7 +1579,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 72,
+					"parent": 76,
 					"translation": [
 						0,
 						0
@@ -1529,7 +1599,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 57,
+					"parent": 61,
 					"translation": [
 						0,
 						0
@@ -1549,7 +1619,7 @@
 				},
 				{
 					"name": "Waschbecken",
-					"parent": 52,
+					"parent": 56,
 					"translation": [
 						96.07083129882812,
 						70.80831909179688
@@ -1566,7 +1636,7 @@
 				},
 				{
 					"name": "Ständer",
-					"parent": 76,
+					"parent": 80,
 					"translation": [
 						-0.570831298828125,
 						99.08792114257812
@@ -1587,7 +1657,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 77,
+					"parent": 81,
 					"opacity": 1,
 					"color": [
 						0.658823549747467,
@@ -1600,7 +1670,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 77,
+					"parent": 81,
 					"translation": [
 						0,
 						0
@@ -1620,7 +1690,7 @@
 				},
 				{
 					"name": "Becken",
-					"parent": 76,
+					"parent": 80,
 					"translation": [
 						-15.662689208984375,
 						4.188262939453125
@@ -1641,7 +1711,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 80,
+					"parent": 84,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -1654,7 +1724,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 80,
+					"parent": 84,
 					"translation": [
 						0,
 						0
@@ -1674,7 +1744,7 @@
 				},
 				{
 					"name": "Wasserleitung",
-					"parent": 76,
+					"parent": 80,
 					"translation": [
 						16.883697509765625,
 						-38.12652587890625
@@ -1695,7 +1765,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 83,
+					"parent": 87,
 					"opacity": 1,
 					"color": [
 						0.658823549747467,
@@ -1708,7 +1778,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 83,
+					"parent": 87,
 					"translation": [
 						0,
 						0
@@ -1728,7 +1798,7 @@
 				},
 				{
 					"name": "Wasserhahn",
-					"parent": 76,
+					"parent": 80,
 					"translation": [
 						-0.65020751953125,
 						-65.14959716796875
@@ -1749,7 +1819,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 86,
+					"parent": 90,
 					"opacity": 1,
 					"color": [
 						0.658823549747467,
@@ -1762,7 +1832,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 86,
+					"parent": 90,
 					"translation": [
 						0,
 						0
@@ -1782,7 +1852,7 @@
 				},
 				{
 					"name": "Klo",
-					"parent": 52,
+					"parent": 56,
 					"translation": [
 						-73.21868896484375,
 						156.654052734375
@@ -1799,7 +1869,7 @@
 				},
 				{
 					"name": "Klo",
-					"parent": 89,
+					"parent": 93,
 					"translation": [
 						2.79315185546875,
 						25.46649169921875
@@ -1820,7 +1890,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 90,
+					"parent": 94,
 					"opacity": 1,
 					"color": [
 						0.6571428775787354,
@@ -1833,7 +1903,7 @@
 				},
 				{
 					"name": "Deckel",
-					"parent": 90,
+					"parent": 94,
 					"translation": [
 						-5.586273193359375,
 						-50.93292236328125
@@ -1854,7 +1924,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 92,
+					"parent": 96,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -1867,7 +1937,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 92,
+					"parent": 96,
 					"translation": [
 						0,
 						0
@@ -1887,7 +1957,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 90,
+					"parent": 94,
 					"translation": [
 						0,
 						0
@@ -1965,7 +2035,7 @@
 				},
 				{
 					"name": "Room",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						-46.16754150390625,
 						-0.867218017578125
@@ -1986,7 +2056,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 97,
+					"parent": 101,
 					"opacity": 1,
 					"color": [
 						0.9190475940704346,
@@ -1999,7 +2069,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 97,
+					"parent": 101,
 					"translation": [
 						0,
 						0
@@ -2019,7 +2089,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 97,
+					"parent": 101,
 					"opacity": 1,
 					"color": [
 						0.15294118225574493,
@@ -2035,7 +2105,7 @@
 				},
 				{
 					"name": "Kühlschrank",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						12.83245849609375,
 						46.432769775390625
@@ -2052,7 +2122,7 @@
 				},
 				{
 					"name": "Unten",
-					"parent": 101,
+					"parent": 105,
 					"translation": [
 						-15.5,
 						98.70001220703125
@@ -2073,7 +2143,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 102,
+					"parent": 106,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -2086,7 +2156,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 102,
+					"parent": 106,
 					"translation": [
 						0,
 						0
@@ -2106,7 +2176,7 @@
 				},
 				{
 					"name": "UntenGriff",
-					"parent": 101,
+					"parent": 105,
 					"translation": [
 						24.5,
 						48.70001220703125
@@ -2127,7 +2197,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 105,
+					"parent": 109,
 					"opacity": 1,
 					"color": [
 						0.800000011920929,
@@ -2143,7 +2213,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 105,
+					"parent": 109,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2156,7 +2226,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 105,
+					"parent": 109,
 					"translation": [
 						0,
 						0
@@ -2176,7 +2246,7 @@
 				},
 				{
 					"name": "Trennung",
-					"parent": 101,
+					"parent": 105,
 					"translation": [
 						-15.5,
 						-6.79998779296875
@@ -2197,7 +2267,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 109,
+					"parent": 113,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2210,7 +2280,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 109,
+					"parent": 113,
 					"translation": [
 						0,
 						0
@@ -2230,7 +2300,7 @@
 				},
 				{
 					"name": "Oben",
-					"parent": 101,
+					"parent": 105,
 					"translation": [
 						-15.5,
 						-63.79998779296875
@@ -2251,7 +2321,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 112,
+					"parent": 116,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -2264,7 +2334,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 112,
+					"parent": 116,
 					"translation": [
 						0,
 						0
@@ -2284,7 +2354,7 @@
 				},
 				{
 					"name": "ObenGriff",
-					"parent": 101,
+					"parent": 105,
 					"translation": [
 						24.5,
 						-70.79998779296875
@@ -2305,7 +2375,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 115,
+					"parent": 119,
 					"opacity": 1,
 					"color": [
 						0.800000011920929,
@@ -2321,7 +2391,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 115,
+					"parent": 119,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2334,7 +2404,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 115,
+					"parent": 119,
 					"translation": [
 						0,
 						0
@@ -2354,7 +2424,7 @@
 				},
 				{
 					"name": "Dunstabzugshaube",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						131.4991455078125,
 						-129.70054626464844
@@ -2371,7 +2441,7 @@
 				},
 				{
 					"name": "Unten",
-					"parent": 119,
+					"parent": 123,
 					"translation": [
 						12.333251953125,
 						46.51512145996094
@@ -2392,7 +2462,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 120,
+					"parent": 124,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2405,7 +2475,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 120,
+					"parent": 124,
 					"translation": [
 						0,
 						0
@@ -2425,7 +2495,7 @@
 				},
 				{
 					"name": "Mitte",
-					"parent": 119,
+					"parent": 123,
 					"translation": [
 						12.4241943359375,
 						2.56060791015625
@@ -2446,7 +2516,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 123,
+					"parent": 127,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -2459,7 +2529,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 123,
+					"parent": 127,
 					"translation": [
 						0,
 						0
@@ -2513,7 +2583,7 @@
 				},
 				{
 					"name": "Oben",
-					"parent": 119,
+					"parent": 123,
 					"translation": [
 						27.242431640625,
 						-66.16667175292969
@@ -2534,7 +2604,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 126,
+					"parent": 130,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2547,7 +2617,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 126,
+					"parent": 130,
 					"translation": [
 						0,
 						0
@@ -2567,7 +2637,7 @@
 				},
 				{
 					"name": "Herd",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						131.58245849609375,
 						176.72799682617188
@@ -2584,7 +2654,7 @@
 				},
 				{
 					"name": "Tür",
-					"parent": 129,
+					"parent": 133,
 					"translation": [
 						0,
 						0
@@ -2605,7 +2675,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 130,
+					"parent": 134,
 					"opacity": 1,
 					"color": [
 						0.800000011920929,
@@ -2621,7 +2691,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 130,
+					"parent": 134,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2634,7 +2704,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 130,
+					"parent": 134,
 					"translation": [
 						0,
 						0
@@ -2654,7 +2724,7 @@
 				},
 				{
 					"name": "Rahmen",
-					"parent": 129,
+					"parent": 133,
 					"translation": [
 						0,
 						-0.000030517578125
@@ -2675,7 +2745,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 134,
+					"parent": 138,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -2688,7 +2758,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 134,
+					"parent": 138,
 					"translation": [
 						0,
 						0
@@ -2708,7 +2778,7 @@
 				},
 				{
 					"name": "KreisL",
-					"parent": 129,
+					"parent": 133,
 					"translation": [
 						-36.9666748046875,
 						-47.86444091796875
@@ -2729,7 +2799,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 137,
+					"parent": 141,
 					"opacity": 1,
 					"color": [
 						0.800000011920929,
@@ -2745,7 +2815,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 137,
+					"parent": 141,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2758,7 +2828,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 137,
+					"parent": 141,
 					"translation": [
 						0,
 						0
@@ -2777,7 +2847,7 @@
 				},
 				{
 					"name": "KreisM",
-					"parent": 129,
+					"parent": 133,
 					"translation": [
 						-1.13330078125,
 						-47.8021240234375
@@ -2798,7 +2868,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 141,
+					"parent": 145,
 					"opacity": 1,
 					"color": [
 						0.800000011920929,
@@ -2814,7 +2884,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 141,
+					"parent": 145,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2827,7 +2897,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 141,
+					"parent": 145,
 					"translation": [
 						0,
 						0
@@ -2846,7 +2916,7 @@
 				},
 				{
 					"name": "KreisR",
-					"parent": 129,
+					"parent": 133,
 					"translation": [
 						34.70001220703125,
 						-47.8021240234375
@@ -2867,7 +2937,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 145,
+					"parent": 149,
 					"opacity": 1,
 					"color": [
 						0.800000011920929,
@@ -2883,7 +2953,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 145,
+					"parent": 149,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2896,7 +2966,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 145,
+					"parent": 149,
 					"translation": [
 						0,
 						0
@@ -2915,7 +2985,7 @@
 				},
 				{
 					"name": "Topf",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						140.6324462890625,
 						31.7327880859375
@@ -2932,7 +3002,7 @@
 				},
 				{
 					"name": "Unten",
-					"parent": 149,
+					"parent": 153,
 					"translation": [
 						-9.04998779296875,
 						47.82855224609375
@@ -2953,7 +3023,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 150,
+					"parent": 154,
 					"opacity": 1,
 					"color": [
 						0.529411792755127,
@@ -2966,7 +3036,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 150,
+					"parent": 154,
 					"translation": [
 						0,
 						0
@@ -2986,7 +3056,7 @@
 				},
 				{
 					"name": "GriffL",
-					"parent": 149,
+					"parent": 153,
 					"translation": [
 						-48.8411865234375,
 						23.32855224609375
@@ -3007,7 +3077,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 153,
+					"parent": 157,
 					"opacity": 1,
 					"color": [
 						0.24705882370471954,
@@ -3020,7 +3090,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 153,
+					"parent": 157,
 					"translation": [
 						0,
 						0
@@ -3040,7 +3110,7 @@
 				},
 				{
 					"name": "Oben",
-					"parent": 149,
+					"parent": 153,
 					"translation": [
 						-9.0325927734375,
 						10.53955078125
@@ -3061,7 +3131,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 156,
+					"parent": 160,
 					"opacity": 1,
 					"color": [
 						0.8235294222831726,
@@ -3074,7 +3144,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 156,
+					"parent": 160,
 					"translation": [
 						0,
 						0
@@ -3094,7 +3164,7 @@
 				},
 				{
 					"name": "GriffR",
-					"parent": 149,
+					"parent": 153,
 					"translation": [
 						30.87860107421875,
 						23.32855224609375
@@ -3115,7 +3185,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 159,
+					"parent": 163,
 					"opacity": 1,
 					"color": [
 						0.24705882370471954,
@@ -3128,7 +3198,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 159,
+					"parent": 163,
 					"translation": [
 						0,
 						0
@@ -3148,7 +3218,7 @@
 				},
 				{
 					"name": "Kreis",
-					"parent": 149,
+					"parent": 153,
 					"translation": [
 						-9.04998779296875,
 						3.2255859375
@@ -3169,7 +3239,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 162,
+					"parent": 166,
 					"opacity": 1,
 					"color": [
 						0.24705882370471954,
@@ -3182,7 +3252,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 162,
+					"parent": 166,
 					"translation": [
 						0,
 						0
@@ -3201,7 +3271,7 @@
 				},
 				{
 					"name": "Schrank",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						-172.91754150390625,
 						-92.11721801757812
@@ -3218,7 +3288,7 @@
 				},
 				{
 					"name": "Außen",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						0,
 						0
@@ -3239,7 +3309,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 166,
+					"parent": 170,
 					"opacity": 1,
 					"color": [
 						0.976190447807312,
@@ -3252,7 +3322,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 166,
+					"parent": 170,
 					"translation": [
 						0,
 						0
@@ -3272,7 +3342,7 @@
 				},
 				{
 					"name": "Innen",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						0,
 						0
@@ -3293,7 +3363,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 169,
+					"parent": 173,
 					"opacity": 1,
 					"color": [
 						0.9176470637321472,
@@ -3306,7 +3376,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 169,
+					"parent": 173,
 					"translation": [
 						0,
 						0
@@ -3326,7 +3396,7 @@
 				},
 				{
 					"name": "DeckelL",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						-51.25,
 						-4.75
@@ -3347,7 +3417,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 172,
+					"parent": 176,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3360,7 +3430,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 172,
+					"parent": 176,
 					"translation": [
 						0,
 						0
@@ -3380,7 +3450,7 @@
 				},
 				{
 					"name": "FlascheL",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						-51.25,
 						14.75
@@ -3401,7 +3471,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 175,
+					"parent": 179,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3414,7 +3484,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 175,
+					"parent": 179,
 					"translation": [
 						0,
 						0
@@ -3434,7 +3504,7 @@
 				},
 				{
 					"name": "DeckelM",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						-3.75,
 						-4.75
@@ -3455,7 +3525,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 178,
+					"parent": 182,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3468,7 +3538,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 178,
+					"parent": 182,
 					"translation": [
 						0,
 						0
@@ -3488,7 +3558,7 @@
 				},
 				{
 					"name": "FlascheM",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						-3.75,
 						14.75
@@ -3509,7 +3579,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 181,
+					"parent": 185,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3522,7 +3592,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 181,
+					"parent": 185,
 					"translation": [
 						0,
 						0
@@ -3542,7 +3612,7 @@
 				},
 				{
 					"name": "DeckelR",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						48.75,
 						-4.75
@@ -3563,7 +3633,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 184,
+					"parent": 188,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3576,7 +3646,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 184,
+					"parent": 188,
 					"translation": [
 						0,
 						0
@@ -3596,7 +3666,7 @@
 				},
 				{
 					"name": "Rectangle",
-					"parent": 165,
+					"parent": 169,
 					"translation": [
 						48.75,
 						15.25
@@ -3617,7 +3687,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 187,
+					"parent": 191,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3630,7 +3700,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 187,
+					"parent": 191,
 					"translation": [
 						0,
 						0
@@ -3650,7 +3720,7 @@
 				},
 				{
 					"name": "Essstisch",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						-202.23004150390625,
 						154.38278198242188
@@ -3667,7 +3737,7 @@
 				},
 				{
 					"name": "TischL",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						-15.9375,
 						-1.607147216796875
@@ -3688,7 +3758,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 191,
+					"parent": 195,
 					"opacity": 1,
 					"color": [
 						1,
@@ -3701,7 +3771,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 191,
+					"parent": 195,
 					"translation": [
 						0,
 						0
@@ -3755,7 +3825,7 @@
 				},
 				{
 					"name": "StuhlMitte",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						26.5625,
 						12.25
@@ -3776,7 +3846,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 194,
+					"parent": 198,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -3789,7 +3859,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 194,
+					"parent": 198,
 					"translation": [
 						0,
 						0
@@ -3809,7 +3879,7 @@
 				},
 				{
 					"name": "TischBein",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						27.62713623046875,
 						59.8719482421875
@@ -3830,7 +3900,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 197,
+					"parent": 201,
 					"opacity": 1,
 					"color": [
 						0.523809552192688,
@@ -3843,7 +3913,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 197,
+					"parent": 201,
 					"translation": [
 						0,
 						0
@@ -3863,7 +3933,7 @@
 				},
 				{
 					"name": "LückeL",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						14.5600004196167,
 						59.75
@@ -3884,7 +3954,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 200,
+					"parent": 204,
 					"opacity": 1,
 					"color": [
 						0.9176470637321472,
@@ -3897,7 +3967,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 200,
+					"parent": 204,
 					"translation": [
 						0,
 						0
@@ -3917,7 +3987,7 @@
 				},
 				{
 					"name": "LückeR",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						40.560001373291016,
 						59.6832275390625
@@ -3938,7 +4008,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 203,
+					"parent": 207,
 					"opacity": 1,
 					"color": [
 						0.9176470637321472,
@@ -3951,7 +4021,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 203,
+					"parent": 207,
 					"translation": [
 						0,
 						0
@@ -3971,7 +4041,7 @@
 				},
 				{
 					"name": "TischM",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						27.5,
 						13.3404541015625
@@ -3992,7 +4062,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 206,
+					"parent": 210,
 					"opacity": 1,
 					"color": [
 						1,
@@ -4005,7 +4075,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 206,
+					"parent": 210,
 					"translation": [
 						0,
 						0
@@ -4025,7 +4095,7 @@
 				},
 				{
 					"name": "TischR",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						69.0625,
 						-1.607208251953125
@@ -4046,7 +4116,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 209,
+					"parent": 213,
 					"opacity": 1,
 					"color": [
 						1,
@@ -4059,7 +4129,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 209,
+					"parent": 213,
 					"translation": [
 						0,
 						0
@@ -4113,7 +4183,7 @@
 				},
 				{
 					"name": "StuhlLinks",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						-121.73675537109375,
 						-109.875
@@ -4130,7 +4200,7 @@
 				},
 				{
 					"name": "StuhlL1",
-					"parent": 212,
+					"parent": 216,
 					"translation": [
 						51.79925537109375,
 						122.625
@@ -4151,7 +4221,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 213,
+					"parent": 217,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -4164,7 +4234,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 213,
+					"parent": 217,
 					"translation": [
 						0,
 						0
@@ -4184,7 +4254,7 @@
 				},
 				{
 					"name": "StuhlL2",
-					"parent": 212,
+					"parent": 216,
 					"translation": [
 						81.29925537109375,
 						136.625
@@ -4205,7 +4275,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 216,
+					"parent": 220,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -4218,7 +4288,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 216,
+					"parent": 220,
 					"translation": [
 						0,
 						0
@@ -4238,7 +4308,7 @@
 				},
 				{
 					"name": "StuhlL3",
-					"parent": 212,
+					"parent": 216,
 					"translation": [
 						101.10226440429688,
 						170.125
@@ -4259,7 +4329,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 219,
+					"parent": 223,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -4272,7 +4342,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 219,
+					"parent": 223,
 					"translation": [
 						0,
 						0
@@ -4292,7 +4362,7 @@
 				},
 				{
 					"name": "StuhlRechts",
-					"parent": 190,
+					"parent": 194,
 					"translation": [
 						172.54893493652344,
 						-110.35116577148438
@@ -4309,7 +4379,7 @@
 				},
 				{
 					"name": "StuhlL1",
-					"parent": 222,
+					"parent": 226,
 					"translation": [
 						51.79925537109375,
 						122.625
@@ -4330,7 +4400,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 223,
+					"parent": 227,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -4343,7 +4413,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 223,
+					"parent": 227,
 					"translation": [
 						0,
 						0
@@ -4363,7 +4433,7 @@
 				},
 				{
 					"name": "StuhlL2",
-					"parent": 222,
+					"parent": 226,
 					"translation": [
 						81.29925537109375,
 						136.625
@@ -4384,7 +4454,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 226,
+					"parent": 230,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -4397,7 +4467,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 226,
+					"parent": 230,
 					"translation": [
 						0,
 						0
@@ -4417,7 +4487,7 @@
 				},
 				{
 					"name": "StuhlL3",
-					"parent": 222,
+					"parent": 226,
 					"translation": [
 						101.10226440429688,
 						170.125
@@ -4438,7 +4508,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 229,
+					"parent": 233,
 					"opacity": 1,
 					"color": [
 						0.4000000059604645,
@@ -4451,7 +4521,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 229,
+					"parent": 233,
 					"translation": [
 						0,
 						0
@@ -4471,7 +4541,7 @@
 				},
 				{
 					"name": "Fenster",
-					"parent": 96,
+					"parent": 100,
 					"translation": [
 						4.7684326171875,
 						-186.59133911132812
@@ -4488,7 +4558,7 @@
 				},
 				{
 					"name": "FensterInnen",
-					"parent": 232,
+					"parent": 236,
 					"translation": [
 						0,
 						0
@@ -4509,7 +4579,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 233,
+					"parent": 237,
 					"opacity": 1,
 					"color": [
 						0.9764705896377563,
@@ -4522,7 +4592,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 233,
+					"parent": 237,
 					"translation": [
 						0,
 						0
@@ -4541,7 +4611,7 @@
 				},
 				{
 					"name": "FensterAußen",
-					"parent": 232,
+					"parent": 236,
 					"translation": [
 						0,
 						0
@@ -4562,7 +4632,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 236,
+					"parent": 240,
 					"opacity": 1,
 					"color": [
 						0,
@@ -4575,7 +4645,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 236,
+					"parent": 240,
 					"translation": [
 						0,
 						0
@@ -4678,7 +4748,7 @@
 				},
 				{
 					"name": "Path",
-					"parent": 239,
+					"parent": 243,
 					"translation": [
 						0,
 						0
@@ -4748,7 +4818,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 239,
+					"parent": 243,
 					"opacity": 1,
 					"color": [
 						0.15238095819950104,
@@ -4781,23 +4851,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 242,
-					"opacity": 1,
-					"color": [
-						0.800000011920929,
-						0.800000011920929,
-						0.800000011920929,
-						1
-					],
-					"width": 1,
-					"cap": 0,
-					"join": 0,
-					"trim": 0,
-					"type": "colorStroke"
-				},
-				{
-					"name": "Color",
-					"parent": 242,
+					"parent": 246,
 					"opacity": 1,
 					"color": [
 						0.09071426838636398,
@@ -4810,7 +4864,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 242,
+					"parent": 246,
 					"translation": [
 						0,
 						0
@@ -4829,94 +4883,9 @@
 					"type": "rectangle"
 				},
 				{
-					"name": "Color",
-					"parent": 242,
-					"opacity": 1,
-					"color": [
-						1,
-						1,
-						1,
-						1
-					],
-					"width": 1,
-					"cap": 0,
-					"join": 0,
-					"trim": 0,
-					"type": "colorStroke"
-				},
-				{
-					"name": "Boden",
-					"translation": [
-						1109.9166259765625,
-						1622.0831298828125
-					],
-					"rotation": 0,
-					"scale": [
-						1,
-						1
-					],
-					"opacity": 1,
-					"isCollapsed": false,
-					"clips": [],
-					"isVisible": true,
-					"blendMode": 3,
-					"drawOrder": 74,
-					"transformAffectsStroke": false,
-					"type": "shape"
-				},
-				{
-					"name": "Color",
-					"parent": 247,
-					"opacity": 1,
-					"color": [
-						0.8235294222831726,
-						0.8235294222831726,
-						0.8235294222831726,
-						1
-					],
-					"width": 50,
-					"cap": 1,
-					"join": 1,
-					"trim": 0,
-					"type": "colorStroke"
-				},
-				{
-					"name": "Color",
-					"parent": 247,
-					"opacity": 1,
-					"color": [
-						0.8235294222831726,
-						0.8235294222831726,
-						0.8235294222831726,
-						1
-					],
-					"fillRule": 1,
-					"type": "colorFill"
-				},
-				{
-					"name": "Rectangle Path",
-					"parent": 247,
-					"translation": [
-						0,
-						0
-					],
-					"rotation": 0,
-					"scale": [
-						1,
-						1
-					],
-					"opacity": 1,
-					"isCollapsed": false,
-					"clips": [],
-					"width": 1500,
-					"height": 10,
-					"cornerRadius": 0,
-					"type": "rectangle"
-				},
-				{
 					"name": "Wolken",
 					"translation": [
-						1512.625,
+						1069.9998779296875,
 						531.3125
 					],
 					"rotation": 0,
@@ -4931,7 +4900,7 @@
 				},
 				{
 					"name": "Wolke1",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						-540.125,
 						-31.3125
@@ -4952,7 +4921,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 252,
+					"parent": 250,
 					"opacity": 1,
 					"color": [
 						1,
@@ -4965,7 +4934,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 252,
+					"parent": 250,
 					"translation": [
 						0,
 						0
@@ -4985,77 +4954,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 252,
-					"opacity": 1,
-					"color": [
-						1,
-						1,
-						1,
-						1
-					],
-					"width": 50,
-					"cap": 1,
-					"join": 1,
-					"trim": 0,
-					"type": "colorStroke"
-				},
-				{
-					"name": "Wolke2",
-					"parent": 251,
-					"translation": [
-						-330.125,
-						58.6875
-					],
-					"rotation": 0,
-					"scale": [
-						1,
-						1
-					],
-					"opacity": 1,
-					"isCollapsed": false,
-					"clips": [],
-					"isVisible": true,
-					"blendMode": 3,
-					"drawOrder": 77,
-					"transformAffectsStroke": false,
-					"type": "shape"
-				},
-				{
-					"name": "Color",
-					"parent": 256,
-					"opacity": 1,
-					"color": [
-						1,
-						1,
-						1,
-						1
-					],
-					"fillRule": 1,
-					"type": "colorFill"
-				},
-				{
-					"name": "Wolke3",
-					"parent": 256,
-					"translation": [
-						0,
-						0
-					],
-					"rotation": 0,
-					"scale": [
-						1,
-						1
-					],
-					"opacity": 1,
-					"isCollapsed": false,
-					"clips": [],
-					"width": 450,
-					"height": 10,
-					"cornerRadius": 0,
-					"type": "rectangle"
-				},
-				{
-					"name": "Color",
-					"parent": 256,
+					"parent": 250,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5071,7 +4970,7 @@
 				},
 				{
 					"name": "Wolke3",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						74.875,
 						-176.3125
@@ -5092,7 +4991,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 260,
+					"parent": 254,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5105,7 +5004,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 260,
+					"parent": 254,
 					"translation": [
 						0,
 						0
@@ -5125,7 +5024,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 260,
+					"parent": 254,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5141,7 +5040,7 @@
 				},
 				{
 					"name": "Wolke4",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						219.875,
 						-83.8125
@@ -5162,7 +5061,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 264,
+					"parent": 258,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5175,7 +5074,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 264,
+					"parent": 258,
 					"translation": [
 						0,
 						0
@@ -5195,7 +5094,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 264,
+					"parent": 258,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5211,7 +5110,7 @@
 				},
 				{
 					"name": "Wolke5",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						142.375,
 						171.1875
@@ -5232,7 +5131,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 268,
+					"parent": 262,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5245,7 +5144,7 @@
 				},
 				{
 					"name": "Rectangle Path",
-					"parent": 268,
+					"parent": 262,
 					"translation": [
 						0,
 						0
@@ -5265,7 +5164,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 268,
+					"parent": 262,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5281,7 +5180,7 @@
 				},
 				{
 					"name": "WolkeKreisL",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						-275.625,
 						-30.3125
@@ -5302,7 +5201,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 272,
+					"parent": 266,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5315,7 +5214,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 272,
+					"parent": 266,
 					"translation": [
 						0,
 						0
@@ -5334,7 +5233,7 @@
 				},
 				{
 					"name": "WolkeKreisROben",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						401.875,
 						-82.8125
@@ -5355,7 +5254,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 275,
+					"parent": 269,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5368,7 +5267,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 275,
+					"parent": 269,
 					"translation": [
 						0,
 						0
@@ -5387,7 +5286,7 @@
 				},
 				{
 					"name": "WolkeKreisRUnten",
-					"parent": 251,
+					"parent": 249,
 					"translation": [
 						306.875,
 						174.6875
@@ -5408,7 +5307,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 278,
+					"parent": 272,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5421,7 +5320,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 278,
+					"parent": 272,
 					"translation": [
 						0,
 						0
@@ -5437,6 +5336,76 @@
 					"width": 50,
 					"height": 50,
 					"type": "ellipse"
+				},
+				{
+					"name": "Wolke2",
+					"parent": 249,
+					"translation": [
+						-392.83209228515625,
+						61.82830810546875
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"isVisible": true,
+					"blendMode": 3,
+					"drawOrder": 77,
+					"transformAffectsStroke": false,
+					"type": "shape"
+				},
+				{
+					"name": "Color",
+					"parent": 275,
+					"opacity": 1,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"fillRule": 1,
+					"type": "colorFill"
+				},
+				{
+					"name": "Rectangle Path",
+					"parent": 275,
+					"translation": [
+						0,
+						0
+					],
+					"rotation": 0,
+					"scale": [
+						1,
+						1
+					],
+					"opacity": 1,
+					"isCollapsed": false,
+					"clips": [],
+					"width": 350,
+					"height": 10,
+					"cornerRadius": 0,
+					"type": "rectangle"
+				},
+				{
+					"name": "Color",
+					"parent": 275,
+					"opacity": 1,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"width": 50,
+					"cap": 1,
+					"join": 1,
+					"trim": 0,
+					"type": "colorStroke"
 				},
 				{
 					"name": "Sonne",
@@ -5456,7 +5425,7 @@
 				},
 				{
 					"name": "Innen",
-					"parent": 281,
+					"parent": 279,
 					"translation": [
 						0,
 						0
@@ -5477,7 +5446,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 282,
+					"parent": 280,
 					"opacity": 1,
 					"color": [
 						0.8952381014823914,
@@ -5490,7 +5459,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 282,
+					"parent": 280,
 					"translation": [
 						0,
 						0
@@ -5509,7 +5478,7 @@
 				},
 				{
 					"name": "Außen",
-					"parent": 281,
+					"parent": 279,
 					"translation": [
 						0,
 						0
@@ -5530,7 +5499,7 @@
 				},
 				{
 					"name": "Color",
-					"parent": 285,
+					"parent": 283,
 					"opacity": 1,
 					"color": [
 						1,
@@ -5543,7 +5512,7 @@
 				},
 				{
 					"name": "Ellipse Path",
-					"parent": 285,
+					"parent": 283,
 					"translation": [
 						0,
 						0
@@ -5561,7 +5530,832 @@
 					"type": "ellipse"
 				}
 			],
-			"animations": [],
+			"animations": [
+				{
+					"name": "Idle",
+					"fps": 60,
+					"duration": 30,
+					"isLooping": true,
+					"keyed": [
+						{
+							"component": 0,
+							"scaleX": [
+								[
+									{
+										"time": 5.25,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 5.466666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 5.716666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 5.933333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 10.766666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 10.983333333333333,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 11.233333333333333,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 11.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 17.25,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 17.466666666666665,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 17.716666666666665,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 17.933333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 23.233333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 23.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 23.7,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 23.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 29.233333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 29.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 29.7,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 29.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 5.25,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 5.466666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 5.716666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 5.933333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 10.766666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 10.983333333333333,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 11.233333333333333,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 11.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 17.25,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 17.466666666666665,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 17.716666666666665,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 17.933333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 23.233333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 23.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 23.7,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 23.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 29.233333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 29.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 29.7,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 29.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									}
+								]
+							]
+						},
+						{
+							"component": 249,
+							"posX": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1069.9998779296875
+									},
+									{
+										"time": 14.983333333333333,
+										"interpolatorType": 1,
+										"value": -299.59588623046875
+									},
+									{
+										"time": 15,
+										"interpolatorType": 1,
+										"value": -301.1193542480469
+									},
+									{
+										"time": 15.05,
+										"interpolatorType": 1,
+										"value": 2705.37939453125
+									},
+									{
+										"time": 15.066666666666666,
+										"interpolatorType": 1,
+										"value": 2703.55615234375
+									},
+									{
+										"time": 30,
+										"interpolatorType": 1,
+										"value": 1070
+									}
+								]
+							],
+							"opacity": [
+								[
+									{
+										"time": 0,
+										"interpolatorType": 1,
+										"value": 1
+									},
+									{
+										"time": 14.983333333333333,
+										"interpolatorType": 1,
+										"value": 1
+									},
+									{
+										"time": 15,
+										"interpolatorType": 1,
+										"value": 0
+									},
+									{
+										"time": 15.05,
+										"interpolatorType": 1,
+										"value": 0
+									},
+									{
+										"time": 15.066666666666666,
+										"interpolatorType": 1,
+										"value": 1
+									},
+									{
+										"time": 30,
+										"interpolatorType": 1,
+										"value": 1
+									}
+								]
+							]
+						},
+						{
+							"component": 279,
+							"scaleX": [
+								[
+									{
+										"time": 2.2333333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 2.4833333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 2.716666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 2.966666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 8.2,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 8.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 8.683333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 8.933333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 14.183333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 14.433333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 14.666666666666666,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 14.916666666666666,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 20.183333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 20.433333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 20.666666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 20.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 26.183333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 26.433333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 26.666666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 26.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									}
+								]
+							],
+							"scaleY": [
+								[
+									{
+										"time": 2.2333333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 2.4833333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 2.716666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 2.966666666666667,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 8.2,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 8.45,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 8.683333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 8.933333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 14.183333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 14.433333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 14.666666666666666,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 14.916666666666666,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 20.183333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 20.433333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 20.666666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 20.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 26.183333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									},
+									{
+										"time": 26.433333333333334,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1.1
+									},
+									{
+										"time": 26.666666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 0.9
+									},
+									{
+										"time": 26.916666666666668,
+										"interpolatorType": 2,
+										"cubicX1": 0.42,
+										"cubicY1": 0,
+										"cubicX2": 0.58,
+										"cubicY2": 1,
+										"value": 1
+									}
+								]
+							]
+						}
+					],
+					"animationStart": 0,
+					"animationEnd": 30,
+					"type": "animation"
+				}
+			],
 			"type": "artboard"
 		}
 	]

@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Quarantäne RPG',
+      title: 'BeInside',
       theme: ThemeData(
         primarySwatch: Colors.lime,
       ),
-      home: MyHomePage(title: 'Quarantäne RPG'),
+      home: MyHomePage(title: 'BeInside'),
     );
   }
 }
@@ -65,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
           ],
           bottom: TabBar(
+            indicatorColor: Colors.black,
             tabs: [
               Tab(icon: Icon(Icons.map)),
               Tab(icon: Icon(Icons.face)),

@@ -11,7 +11,7 @@ class CharacterPage extends StatefulWidget {
 class CharacterPageState extends State<CharacterPage> {
   List items = [];
 
-  String animation = "Idle";
+  String animation = "10 - Jump";
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +62,8 @@ class CharacterPageState extends State<CharacterPage> {
                 callback: (string) {
                   setState(() {
                     if(string=="2 - Hi") {
-                      animation = "Idle";
-                    } else if (string=="Idle"){
+                      animation = "10 - Jump";
+                    } else if (string=="10 - Jump"){
                       animation = "2 - Hi";
                     }
                   });
