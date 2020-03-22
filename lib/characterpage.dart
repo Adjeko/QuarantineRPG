@@ -170,7 +170,7 @@ class CharacterPageState extends State<CharacterPage> {
         child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: DottedBorder(
-              color: Colors.green,
+              color: Colors.black,
               //strokeWidth: 1,
               child: Container(
                 child: Card(
