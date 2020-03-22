@@ -116,59 +116,5 @@ class MapPage extends StatelessWidget {
         },
       ),
     ]);
-    return Column(children: [
-      StreamBuilder(
-        stream: Firestore.instance
-            .collection('quests')
-            .where("game", isEqualTo: "game1")
-            .where("room", isEqualTo: "bedroom")
-            .snapshots(),
-        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-          if (snapshot.hasError) return new Text("Error: ${snapshot.error}");
-          switch (snapshot.connectionState) {
-            case ConnectionState.waiting:
-              return new Text("Loading...");
-            default:
-              return new Expanded(
-                child: ListView(
-                  children:
-                      snapshot.data.documents.map((DocumentSnapshot document) {
-                    return new Card(
-                      child: ListTile(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => QuestDetailPage(
-                                      quest: document,
-                                    )),
-                          );
-                        },
-                        leading: Container(
-                          width: 50,
-                          height: 50,
-                          child: FlareActor(
-                            'assets/${document['icon']}.flr',
-                            alignment: Alignment.centerLeft,
-                            // fit: BoxFit.contain,
-                          ),
-                        ),
-                        title: Container(child: Text(document['title'])),
-                        subtitle: Text(document['description']),
-                        trailing: Text(
-                          "${document['experience']} XP",
-                          style:
-                              TextStyle(fontSize: 30, color: Colors.lightBlue),
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                ),
-              );
-          }
-        },
-      ),
-    ]);
-    ;
   }
 }
