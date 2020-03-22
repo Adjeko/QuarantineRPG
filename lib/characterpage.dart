@@ -3,9 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
-class CharacterPage extends StatelessWidget {
+class CharacterPage extends StatefulWidget {
+  @override
+  CharacterPageState createState() => CharacterPageState();
+}
 
+class CharacterPageState extends State<CharacterPage> {
   List items = [];
+
+  String animation = "Idle";
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +45,19 @@ class CharacterPage extends StatelessWidget {
               width: sizeImage,
               height: sizeImage,
               child: FlareActor(
-                'assets/Bob.flr',
+                'assets/Boy1.flr',
                 alignment: Alignment.center,
                 fit: BoxFit.contain,
-                animation: 'Wave',
+                animation: animation,
+                callback: (string) {
+                  setState(() {
+                    if(string=="2 - Hi") {
+                      animation = "Idle";
+                    } else if (string=="Idle"){
+                      animation = "2 - Hi";
+                    }
+                  });
+                }
               ),
             ),
           ),
