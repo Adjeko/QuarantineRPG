@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'rewarddialog.dart';
 
 class QuestDetailPage extends StatelessWidget {
 
@@ -97,12 +98,32 @@ class QuestDetailPage extends StatelessWidget {
           SpeedDialChild(
             child: Icon(Icons.add),
             label: "Reale Belohnung hinzufügen",
-            onTap: () {},
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) => RewardDialog(
+                  title: "Belohnungen",
+                  description: "Suche eine Belohnung aus",
+                  collection: "realrewards",
+                  field: "description",
+                ),
+              );
+            },
           ),
           SpeedDialChild(
             child: Icon(Icons.add),
             label: "Digitale Belohnung hinzufügen",
-            onTap: () {},
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) => RewardDialog(
+                  title: "Belohnungen",
+                  description: "Suche eine Belohnung aus",
+                  collection: "digitalitems",
+                  field: "icon",
+                ),
+              );
+            },
           ),
         ],
       ), 
