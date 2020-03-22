@@ -29,6 +29,7 @@ class MapPage extends StatelessWidget {
                     'assets/House1.flr',
                     alignment: Alignment.topCenter,
                     fit: BoxFit.fitWidth,
+                    animation: "Idle",
                   ),
                 ),
               ),
