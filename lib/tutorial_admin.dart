@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:math';
 
 class TutorialPopupAdmin extends StatefulWidget {
   const TutorialPopupAdmin(
@@ -168,9 +170,32 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
                     context: context,
                     builder: (BuildContext context) => TutorialPopupAdmin(
                           title: "Spielerstellung",
-                          desc: "Erstelle eine neues Spielbrett",
-                          create: () => {print("it's working :)")},
-                          //TODO
+                          desc: "Erstelle einen neuen Raum",
+                          create: () async {
+                            SharedPreferences prefs = await SharedPreferences.getInstance();
+                            var rng = new Random();
+                            String roomName = "room${rng.nextInt(100)}";
+                            await prefs.setString("game", roomName);
+
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: new Text("Der Raum wurde erstellt"),
+                                  content: new Text("Der Raum heißt ${roomName}"),
+                                  actions: <Widget>[
+                                    // usually buttons at the bottom of the dialog
+                                    new FlatButton(
+                                      child: new Text("Schließen"),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              }
+                            );
+                          },
                         ))
               },
             ),
