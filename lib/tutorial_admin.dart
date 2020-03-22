@@ -112,6 +112,7 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
                       style: TextStyle(color: Colors.white, fontSize: 13),
                     ),
                     onPressed: () => {
+                      create(),
                       Navigator.of(context).pop(),
                       //TODO: create new playground and save to server + generate id
                     },
@@ -176,7 +177,7 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupAdmin>
                             var rng = new Random();
                             String roomName = "room${rng.nextInt(100)}";
                             await prefs.setString("game", roomName);
-
+                            
                             showDialog(
                               context: context,
                               builder: (BuildContext context) {

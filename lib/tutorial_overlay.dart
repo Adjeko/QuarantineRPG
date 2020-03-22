@@ -161,7 +161,7 @@ class TutorialPopupDialogState extends State<TutorialPopup> with TickerProviderS
                       var rng = new Random();
                       String roomName = "room${rng.nextInt(5)}";
                       await prefs.setString("game", roomName);
-
+                      
                       showDialog(
                         context: context,
                         builder: (BuildContext context) {
