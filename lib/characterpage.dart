@@ -32,12 +32,11 @@ class CharacterPageState extends State<CharacterPage> {
       builder: (context, constraints) => Stack(
         fit: StackFit.expand,
         children: <Widget>[
-
           Positioned(
             top: 0,
             left: 0,
             width: constraints.maxWidth,
-            height: constraints.maxHeight/2,
+            height: constraints.maxHeight,
             child: Container(
               color: Color.fromRGBO(207, 234, 255, 1)
             ),
@@ -75,15 +74,15 @@ class CharacterPageState extends State<CharacterPage> {
 
           Positioned(
               top: 30,
-              left: (constraints.maxWidth - 150)/2,
+              left: (constraints.maxWidth - constraints.maxWidth/3)/2,
               child: MaterialButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(60.0)
                 ),
 
                 height: 50,
-                minWidth: 150,
-                color: Colors.blueGrey,
+                minWidth: constraints.maxWidth/3,
+                color: Color.fromRGBO(21, 154, 149, 1),
                 child: Text(
                   "Skillbaum",
                   style: TextStyle(color: Colors.white, fontSize: 13),
@@ -102,9 +101,24 @@ class CharacterPageState extends State<CharacterPage> {
               left: xPadding,
               child: Column(
                 children: <Widget>[
-                  Text(
-                    "Inventory",
-                    style: TextStyle(color: Colors.black, fontSize: 20, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+                  Row (
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Inventory",
+                          style: TextStyle(color: Colors.black, fontSize: 20, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          "XP",
+                          style: TextStyle(color: Colors.black, fontSize: 20, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+                        ),
+                      )
+                    ],
                   ),
                   Expanded(
                     //TODO: create custom liestview
@@ -160,7 +174,7 @@ class CharacterPageState extends State<CharacterPage> {
               //strokeWidth: 1,
               child: Container(
                 child: Card(
-                  color: Colors.blueGrey,
+                  color: Color.fromRGBO(21, 154, 149, 1),
                   //shape: RoundedRectangleBorder(
                   //borderRadius: BorderRadius.circular(5)
                   //),
