@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class TutorialPopupPlayer extends StatefulWidget {
 
@@ -84,7 +85,7 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
                 Padding(
                     padding: EdgeInsets.all(10.0),
                     child: TextFormField(
-                        keyboardType: TextInputType.number,
+                        keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                             labelText: title,
                             hintText: textHint,
@@ -106,8 +107,10 @@ class TutorialPopupPlayerDialogState extends State<TutorialPopupPlayer> with Tic
                       submitName,
                       style: TextStyle(color: Colors.white, fontSize: 13),
                     ),
-                    onPressed: () => {
-                      Navigator.of(context).pop(),
+                    onPressed: () async {
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      await prefs.setString("game", "Input");
+                      Navigator.of(context).pop();
                       //TODO: loading of existing session!
                     },
                   )
