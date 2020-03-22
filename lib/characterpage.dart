@@ -114,8 +114,9 @@ class CharacterPageState extends State<CharacterPage> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          "XP",
-                          style: TextStyle(color: Colors.black, fontSize: 20, fontStyle: FontStyle.normal, fontWeight: FontWeight.bold),
+                          "XP: 120",
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.lightBlue),
                         ),
                       )
                     ],
