@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class RewardDialog extends StatelessWidget {
 
-  String title, description, collection, field;
+  String title, description, collection, questArray, field, questName;
 
   RewardDialog({
     @required this.title,
     @required this.description,
     @required this.collection,
+    @required this.questArray,
     @required this.field,
+    @required this.questName,
   });
 
   @override
@@ -45,8 +48,10 @@ class RewardDialog extends StatelessWidget {
                         snapshot.data.documents.map((DocumentSnapshot document) {
                           return new Card(
                             child: ListTile(
-                              onTap: () {
-
+                              onTap: () async {
+                                SharedPreferences prefs = await SharedPreferences.getInstance();
+                                String gameName = prefs.getString("game");
+                                // Firestore.instance.collection("quests").document(questName).updateData({data}) //.where("game", isEqualTo: gameName).where("name", isEqualTo: questName).snapshots();
                               },
                               title: Container(
                                 child: Text(document[field])),
