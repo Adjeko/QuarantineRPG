@@ -53,7 +53,7 @@ class QuestPage extends StatelessWidget {
                                 ),
                                 title:
                                     Container(child: Text(document['title'])),
-                                subtitle: Text(document['description']),
+                                subtitle: Text(document['subtitle']),
                                 trailing: Text(
                                   "${document['experience']} XP",
                                   style: TextStyle(
