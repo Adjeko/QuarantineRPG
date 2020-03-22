@@ -20,7 +20,7 @@ class CharacterPageState extends State<CharacterPage> {
     double dheight = 0.7 * size.height;
     //TODO: layout selber machen für charackter page?
 
-    double boxsize = 100;
+    double boxSize = 100;
     double xPadding = 20;
     double yPadding = 10;
     double xSpace = 200;
@@ -32,10 +32,21 @@ class CharacterPageState extends State<CharacterPage> {
       builder: (context, constraints) => Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          createBox(boxsize, 0 + yPadding, boxsize, xPadding, "d1"),
-          createBox(boxsize, 0 + yPadding, boxsize, constraints.maxWidth-boxsize-xPadding, "d2"),
-          createBox(boxsize, 0 + yPadding+ySpace, boxsize, 0 + xPadding, "d3"),
-          createBox(boxsize, 0 + yPadding+ySpace, boxsize, constraints.maxWidth-boxsize-xPadding, "d4"),
+
+          Positioned(
+            top: 0,
+            left: 0,
+            width: constraints.maxWidth,
+            height: constraints.maxHeight/2,
+            child: Container(
+              color: Color.fromRGBO(207, 234, 255, 1)
+            ),
+          ),
+
+          createBox(boxSize, 0 + yPadding, boxSize, xPadding, "d1"),
+          createBox(boxSize, 0 + yPadding, boxSize, constraints.maxWidth-boxSize-xPadding, "d2"),
+          createBox(boxSize, 0 + yPadding+ySpace, boxSize, 0 + xPadding, "d3"),
+          createBox(boxSize, 0 + yPadding+ySpace, boxSize, constraints.maxWidth-boxSize-xPadding, "d4"),
 
           Positioned(
             top: 10,
@@ -69,6 +80,7 @@ class CharacterPageState extends State<CharacterPage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(60.0)
                 ),
+
                 height: 50,
                 minWidth: 150,
                 color: Colors.blueGrey,
@@ -86,7 +98,7 @@ class CharacterPageState extends State<CharacterPage> {
           Positioned(
               width: constraints.maxWidth - 2 * xPadding,
               height: constraints.maxHeight/2 - 2 * yPadding,
-              top: constraints.maxHeight /2,
+              top: constraints.maxHeight /2 + 5,
               left: xPadding,
               child: Column(
                 children: <Widget>[
